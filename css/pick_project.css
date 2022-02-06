@@ -1,0 +1,89 @@
+ /* --------------------頁面標示顏色------------------------- */
+.main-sel li:nth-child(3) a{
+    color: #E77114;
+}
+ 
+ /*---------------banner大圖---------------------*/
+.banner{
+    background-image: url(../img05/banner05.png);
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* --------------------購票摘要--------------------------- */
+.summary{
+    padding-top: 80px;
+    font-size: 1rem;
+    color: #005B3A;
+    text-align: center;
+}
+
+.notice{
+    border: 2px solid #E77114;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    padding: 30px;
+}
+
+.light{
+    color: #E77114;
+}
+
+
+/* ------------------------採果行程----------------------------- */
+.h3_title .fruit_bg {
+    background-image: url(../img05/tree_img.png);
+    padding: 40px;
+}
+.project_list{
+    padding-top: 80px;
+    margin-bottom: 80px;
+}
+
+.project_list ul{
+    margin: 0 auto;
+    width: 1200px; /*固定寬度*/
+    /* width: 100%; */
+}
+
+.project_list li{
+    background-image: url(../img05/plan_list.png);
+    height: 200px;
+    
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 3;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.project_list li:last-child{
+    margin-bottom: 0;
+}
+
+.project_list li span{
+    width: 550px;
+}
+
+.pick_ticket{
+    margin-left: 400px;
+}
+
+.pick_ticket a{
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    background-color: #005B3A;
+    text-align: center;
+    color: #fff;
+}
+
+.pick_ticket a:hover{
+    background-color: #E77114;
+}

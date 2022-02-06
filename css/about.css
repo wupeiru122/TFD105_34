@@ -1,0 +1,182 @@
+/* --------------------頁面標示顏色------------------------- */
+.main-sel li:first-child a{
+    color: #E77114;
+}
+
+
+
+/*---------------banner大圖---------------------*/
+.banner{
+    background-image: url(../img02/banner02.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*---------------關於果園---------------------*/
+.about{
+    padding-top: 80px;
+    /* background-image: linear-gradient(#CCFFE1, white); */
+}
+
+.about-text{
+    display: flex;
+    align-items: center;
+}
+
+.about-text img{
+    display: block;
+    height: 400px;
+    margin-right: 100px;
+}
+
+.about-text_btn{
+    font-size: 1.2rem;
+    width: 410px;
+}
+
+.about-text_btn p{
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+/*---------------季節採果---------------------*/
+.fru_season{
+    padding-top: 80px;
+}
+
+.season-icon ul{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 120px;
+    margin-bottom: 50px;
+}
+
+.season-icon li {
+    width: 120px;
+    line-height: 120px;
+    margin-right: 50px;
+}
+
+.season-icon li a{
+    text-decoration: none;
+
+}
+
+.season-icon li a:hover{
+    display: block;
+}
+    
+.season-icon span{
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: bold;
+}
+
+.season-icon .btn1{
+    background-color: #F28DBC;
+}
+
+.btn1 a:hover{
+    background-color: #FF0077;
+}
+
+.season-icon .btn2{
+    background-color: #72A603;
+}
+
+.btn2 a:hover{
+    background-color: #008A58;
+}
+
+.season-icon .btn3{
+    background-color: #F25C05;
+}
+
+.btn3 a:hover{
+    background-color: #FF0000;
+}
+
+.season-icon .btn4{
+    background-color: #8FAFD9;
+    margin-right: 0;
+}
+
+.btn4 a:hover{
+    background-color: #006EFF;
+}
+
+.season-icon_content{
+    padding-left: 300px;
+}
+
+.sea-fru{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #E77114;
+    margin-bottom: 20px;
+}
+
+.fru_intro{
+    display: flex;
+    align-items: center;
+}
+
+.fru_intro img{
+    width: 200px;
+    margin-right: 50px;
+}
+
+.fru_intro .intro_con{
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    width: 300px;
+}
+
+/* --------------------果園特色------------------- */
+.features{
+    padding-top: 80px;
+    margin-bottom: 80px;
+}
+
+.intro{
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.intro img{
+    margin-left: auto;
+}
+
+.intro1a{
+    font-size: 1.2rem;
+}
+
+.intro1_1{
+    color: #009A3E;
+    font-weight: bold;
+}
+
+.intro2{
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+.intro2 img{
+    display: block;
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.intro2a{
+    width: 800px;
+    margin: 0 auto;
+}

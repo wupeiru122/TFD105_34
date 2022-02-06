@@ -1,0 +1,169 @@
+@import url('reset.css');
+
+/*字體規範*/
+.basic_font{
+    font-size: 15px;
+}
+
+.h1_title h1{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    line-height: 500px;
+    text-align: center;   
+}
+
+.h2_title h2{
+    font-size: 2rem;
+    color: #005B3A;
+    font-weight: bold;
+    border-left: 5px solid;
+    padding-left: 10px;
+    margin-bottom: 50px;
+}
+
+.h3_title{
+    font-size: 2rem;
+    color: #005B3A;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;                 
+}
+
+/*字體顏色*/
+.primary_font{
+    color: #fff;
+}
+
+.second_font{
+    color: #005B3A;
+}
+
+.black_font{
+    color: #333;
+}
+
+
+/* ----------------導覽列--------------------- */
+.top-sel{
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.main-sel{
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.main-sel a img{
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+.main-sel ul{
+    width:900px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    margin-left: auto;
+}
+
+.main-sel li{
+    flex-grow: 1;
+    font-size: 1.2em;    
+}
+
+.main-sel li a{
+    text-decoration: none;
+    text-align: center;
+    color: #005B3A;
+    font-weight: bold;
+
+}
+
+.main-sel li img{
+    display: block;
+    width: 40px;
+}
+
+.main-sel li:nth-last-child(-n+2){
+    flex-grow: 0;
+    flex-basis: 30px;
+    margin-left: 30px;
+}
+
+/* .main-sel li a:hover{
+    border-bottom: 3px solid #E77114;
+} */
+
+.main-sel li:nth-last-child(-n+2) a:hover{
+    border-bottom: 0;
+}   
+
+
+/* --------------------頁尾---------------------------- */
+.footer{
+    height: 150px;
+    background-color: #005B3A;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer li img{
+    width: 40px;
+    margin-left: 60px;
+}
+
+.footer p{
+    color: #fff;
+    line-height: 2;
+}
+
+/* -------------------body規範------------------------- */
+
+*{
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: '思源黑體', '微軟正黑體', Arial;
+    background-color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.primary_bg{
+    width: 1200px;/*固定寬度*/
+    margin: 0 auto;
+} 

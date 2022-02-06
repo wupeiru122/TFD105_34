@@ -1,0 +1,112 @@
+/* --------------------頁面標示顏色------------------------- */
+.main-sel li:nth-child(4) a{
+    color: #E77114;
+}
+
+/* --------------------------banner大圖-------------------------- */
+.banner{
+    background-image: url(../img06/banner06.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* -----------------------------聯絡資訊------------------------------- */
+.contact_info{
+    display: flex;
+    padding-top: 80px;
+}
+
+.info_word{
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.h4_title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #009A3E;
+}
+
+/* -----------------------------諮詢服務------------------------------- */
+.form{
+    padding-top: 80px;
+    margin-bottom: 80px;
+}
+
+.h3_title{
+    margin-bottom: 20px;
+}
+
+.form span{
+    font-size: 1.2rem;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form ul{
+    font-size: 1rem;
+    font-weight: bold;
+    width: 30%;
+    margin: 0 auto;
+}
+
+/* .form li{
+    border: 2px solid;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+} */
+
+/* ---------------- input form --------------- */
+
+.form .name{
+	width: 200px;
+	height: 25px;
+	border: 1px solid #ccc;
+	padding-left: 5px;
+	outline: 0;
+}
+
+.form .phone{
+	width: 200px;
+	height: 25px;
+	border: 1px solid #ccc;
+	padding-left: 5px;
+	outline: 0;
+}
+
+.form .address{
+	width: 100%;
+	height: 25px;
+	border: 1px solid #ccc;
+	padding-left: 5px;
+	outline: 0;
+}
+
+.form textarea{
+	width: 100%;
+	height: 100px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	outline: 0;
+	background-color: #f6f6f6;
+	margin-bottom: 20px;
+}
+
+.form .send{
+	width: 100px;
+	height: 30px;
+	font-size: 14px;
+	background-color: #005B3A;
+	color: white;
+	border: 0;
+	display: block;
+	margin: 0 auto;
+}
+
+.form .send:hover{
+    background-color: #E77114;
+}

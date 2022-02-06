@@ -1,0 +1,148 @@
+/* --------------------頁面標示顏色------------------------- */
+.main-sel li:nth-child(2) a{
+    color: #E77114;
+}
+
+/*---------------banner大圖---------------------*/
+.banner{
+    background-image: url(../img03/banner3.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*---------------上方標示頁面---------------------*/
+.tag_row{
+    padding-top: 80px;
+
+}
+.tag_row a{
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #005B3A;
+}
+
+.tag_row a:hover{
+    color: #E77114;
+}
+
+/*---------------側邊欄+產品欄---------------------*/
+.pro_all{
+    display: flex;
+}
+
+/*----------------------側邊欄-----------------------*/
+.product-menu{
+    width: 150px;
+    padding-top: 50px;
+}
+
+.product-menu ul{
+    background-image: url(../img03/light-veneer.png);
+    padding: 20px;
+}
+
+.product-menu li a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #005B3A;
+    line-height: 3;
+    /* padding-left: 30px; */
+}
+
+.product-menu li a:hover{
+    color: #E77114;
+}
+
+.product-menu li:first-child{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #005B3A;
+    text-align: center;
+}
+
+hr{
+    border: 2px solid;
+    color: #005B3A;
+}
+
+/*----------------------產品欄-----------------------*/
+.product-list_coloum{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.product-list_coloum ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.item{
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    margin: 0 10px 50px;
+
+    flex-basis: 250px;
+    flex-grow: 1;
+}
+
+.product_info img{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.price_cart{
+    text-align: center;
+}
+
+.name{
+    margin-bottom: 10px;
+}
+
+.name a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.price_click{
+    /* border: 2px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price{
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 20px
+}
+
+.price_cart img{
+    display: block;
+    width: 50px;
+}
+
+
+/* ------------------------下方頁數------------------------ */
+.pagination_block{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.pagination{
+    font-size: 1.2rem;
+}
+
+.pagination a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: #333;
+}

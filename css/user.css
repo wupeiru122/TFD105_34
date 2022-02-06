@@ -1,0 +1,110 @@
+.user_all{
+    width: 70%;
+    margin: 0 auto;
+    padding: 80px 0 80px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.h4_title{
+    font-size: 30px;
+    color: #005B3A;
+    margin-bottom: 50px;
+}
+
+/* -----------------------------會員登入------------------------------------ */
+.user_login{
+    margin-right: auto;
+}
+
+.user_login ul{
+    text-align: center;
+}
+
+.user_login li{
+    margin-bottom: 10px;
+}
+
+.email{
+    width: 300px;
+	height: 30px;
+	border: 1px solid #ccc;
+	outline: 0;
+}
+
+.password{
+    width: 300px;
+	height: 30px;
+	border: 1px solid #ccc;
+	outline: 0;
+}
+
+.remind a{
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #333;
+}
+
+.login_click{
+    background-color: #005B3A;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.login_click a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ---------------------------會員註冊------------------------------ */
+/* .user_register{} */
+
+.user_register ul{
+    text-align: center;
+}
+
+.user_register li{
+    margin-bottom: 10px;
+}
+
+.user-name{
+    width: 300px;
+	height: 30px;
+	border: 1px solid #ccc;
+	outline: 0;
+}
+
+.email{
+    width: 300px;
+	height: 30px;
+	border: 1px solid #ccc;
+	outline: 0;
+}
+
+.password{
+    width: 300px;
+	height: 30px;
+	border: 1px solid #ccc;
+	outline: 0;
+}
+
+.remind{
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #333;
+}
+
+.login_click{
+    background-color: #005B3A;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.login_click a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
