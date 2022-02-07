@@ -46,7 +46,7 @@
 
 /* ----------------導覽列--------------------- */
 .top-sel{
-    width: 100%;
+    width: 1440px;
     height: 100px;
     background-color: #fff;
     border-bottom: 1px solid #ccc;
@@ -116,6 +116,7 @@
 
 /* --------------------頁尾---------------------------- */
 .footer{
+    width: 1440px;
     height: 150px;
     background-color: #005B3A;
     text-align: center;
