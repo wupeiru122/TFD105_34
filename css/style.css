@@ -48,9 +48,10 @@ body{
 .about-text{
     display: flex;
     align-items: center;
+    position: relative;
 }
 
-.about-text img{
+.about-text .orchard img{
     display: block;
     height: 400px;
     margin-right: 100px;
@@ -58,7 +59,7 @@ body{
 
 .about-text_btn{
     font-size: 1.2rem;
-    width: 410px;
+    width: 300px;
 }
 
 .about-text_btn p{
@@ -83,6 +84,13 @@ body{
     background-color: #E77114;
 }
 
+.about-text .tree img{
+    display: block;
+    height: 350px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 
 /* -----------------------當季採果行程------------------------ */
 .fruit-project{
