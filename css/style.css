@@ -19,8 +19,8 @@ body{
 
 .go_shineMuscat{
     position: absolute;
-	right: -100px;
-	top: 200px;
+	right: 0px;
+	top: 400px;
 	z-index: 1;
     animation: fuwafuwa 3s infinite linear alternate;
 }
