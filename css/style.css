@@ -1,34 +1,8 @@
-@import url('reset.css');
-
-*{
-    box-sizing: border-box;
-}
-
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-
 body{
-    font-family: '思源黑體', '微軟正黑體', Arial;
-    background-color: #fff;
+    font-family: 'Noto Sans TC', '微軟正黑體';
     font-size: 15px;
     line-height: 1.5;
-    margin: 0;
 }
-
-.wrapper{
-    width: 100%;
-    margin: 0 auto;
-}
-
-
-.primary_bg{
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-} 
-
-/*------------------上層選單--------------------*/
 
 /*---------------banner大圖---------------------*/
 .banner{
@@ -38,10 +12,46 @@ body{
     background-position: center;
 }
 
+/* ----------------------動畫------------------------ */
+.about{
+    position: relative;
+}
+
+.go_shineMuscat{
+    position: absolute;
+	right: -100px;
+	top: 200px;
+	z-index: 1;
+    animation: fuwafuwa 3s infinite linear alternate;
+}
+
+.go_shineMuscat img{
+    width: 30%;
+}
+
+.go_shineMuscat a:hover img {
+  opacity: 1;
+}
+
+@keyframes fuwafuwa{
+
+    0%{
+        transform: translate(0, 0) rotate(-5deg); opacity: 1;    
+    }
+
+    50%{
+        transform: translate(0, -5px) rotate(0deg); opacity: .7;
+    }
+
+    100%{
+        transform: translate(0, 0) rotate(5deg); opacity: .5;
+    }
+}
+
 
 /* ------------------關於我們------------------ */
 .about{
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
 
@@ -59,20 +69,19 @@ body{
 
 .about-text_btn{
     font-size: 1.2rem;
-    width: 300px;
+    width: 400px;
 }
 
 .about-text_btn p{
     color: #333;
-    font-weight: bold;
     margin-bottom: 30px;
 }
 
-.about-text_btn a{
+.about-text_btn > a{
     display: block;
     width: 100px;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     background-color: #005B3A;
     color: white;
     text-decoration: none;
@@ -86,15 +95,17 @@ body{
 
 .about-text .tree img{
     display: block;
-    height: 350px;
+    width: 200px;
     position: absolute;
-    bottom: 0;
     right: 0;
+    bottom: 0;
 }
+
+
 
 /* -----------------------當季採果行程------------------------ */
 .fruit-project{
-    padding-top: 80px;
+    padding-top: 100px;
 } 
 
 .fruit-project ul{
@@ -109,8 +120,8 @@ body{
     transition: .5s;
 
     font-size: 1.2rem;
+    font-family: Noto Sans TC;
     color: #fff;
-    font-weight: bold;
     text-align: center;
     padding-top: 20px;
 }
@@ -136,7 +147,7 @@ body{
 
 /* -----------------------熱銷商品------------------------------ */
 .product_list{
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
 .slide_icon{
@@ -173,15 +184,14 @@ body{
 .pro_out .fruit_box{
     border: 1px solid #E5E5E5;
     list-style: none;
-    width: 260px;
-    height: 400px;
+    width: 250px;
     flex-grow: 1;
     margin-right: 100px;
     text-align: center;
 }
 
 .pro_out .fruit_box img{
-    width: 250px;
+    width: 200px;
     margin: 0 auto;
     margin-bottom: 20px;
 }
@@ -190,7 +200,9 @@ body{
     margin-right: 0;
 }
 
-/* .price_cart-out{} */
+.price_cart-out{
+    margin-bottom: 20px;
+}
 
 .fruit_box .pro_name{
     margin-bottom: 10px;
@@ -203,20 +215,8 @@ body{
     text-decoration: none;
 }
 
-.fruit_box .price_cart {
-    display: inline-flex;
-    align-items: center;
-}
-
-.fruit_box .price_cart .price1{
+.fruit_box .price1{
    font-size: 1.2rem;
-   margin-right: 20px;
-}
-
-.fruit_box .price_cart img{
-    /* border: 2px solid; */
-    display: block;
-    width: 50px;
 }
 
 
@@ -224,9 +224,8 @@ body{
 .map{
     list-style: none;
     color: #005B3A;
-    font-weight: bold;
-    padding-top: 80px;
-    margin-bottom: 80px;
+    padding-top: 100px;
+    margin-bottom: 100px;
 }
 
 

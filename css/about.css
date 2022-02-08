@@ -3,8 +3,6 @@
     color: #E77114;
 }
 
-
-
 /*---------------banner大圖---------------------*/
 .banner{
     background-image: url(../img02/banner02.png);
@@ -16,7 +14,7 @@
 
 /*---------------關於果園---------------------*/
 .about{
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
 .about-text{
@@ -38,7 +36,6 @@
 
 .about-text_btn p{
     color: #333;
-    font-weight: bold;
     margin-bottom: 30px;
 }
 
@@ -53,7 +50,7 @@
 
 /*---------------季節採果---------------------*/
 .fru_season{
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
 .season-icon ul{
@@ -98,7 +95,7 @@
 }
 
 .btn2 a:hover{
-    background-color: #008A58;
+    background-color: #9CE400;
 }
 
 .season-icon .btn3{
@@ -124,7 +121,6 @@
 
 .sea-fru{
     font-size: 1rem;
-    font-weight: bold;
     color: #E77114;
     margin-bottom: 20px;
 }
@@ -142,14 +138,13 @@
 .fru_intro .intro_con{
     font-size: 1rem;
     color: #333;
-    font-weight: bold;
     width: 300px;
 }
 
 /* --------------------果園特色------------------- */
 .features{
-    padding-top: 80px;
-    margin-bottom: 80px;
+    padding-top: 100px;
+    margin-bottom: 100px;
 }
 
 .intro{

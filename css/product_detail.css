@@ -1,7 +1,7 @@
 /* ---------------------------上方標示頁面--------------------------- */
 .tag_row{
     /* border: 2px solid; */
-    padding-top: 80px;
+    padding-top: 100px;
 }
 .tag_row a{
     text-decoration: none;
@@ -17,12 +17,10 @@
 
 /* ----------------------------商品圖片------------------------------- */
 .pro-del{
-    /* border: 2px solid; */
     display: flex;
 }
 
 .pro-del_img{
-    /* border: 2px solid; */
     margin-right: 100px;
 }
 
@@ -35,10 +33,6 @@
 }
 
 /* -----------------------------商品文字---------------------------------- */
-/* .pro-del_info{
-    border: 2px solid;
-} */
-
 .mainpro_name{
     font-size: 2rem;
     font-weight: bold;
@@ -55,27 +49,34 @@
     color: #E77114;
 }
 
-.amount, .quantity{
-    font-size: 1rem;
-    display: inline;
-    margin-bottom: 30px;
+.amount-list{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
-.quantity{
-    font-size: 1rem;
+.amount{
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.form-control{
+    font-size: 1.2rem;
     width: 100px;
+    height: 30px;
+    margin-right: 50px;
 }
 
 .cart_submit{
-    height: 30px;
-    width: 100px;
+    height: 40px;
+    width: 150px;
     background-color: #005B3A;
     text-align: center;
-    line-height: 30px;
-    margin-bottom: 30px;
+    line-height: 40px;
 }
 
-.cart_submit a{
+.cart_submit > a{
+    font-size: 1.2rem;
     display: block;
     text-decoration: none;
     color: #fff;
@@ -91,12 +92,11 @@
 
 /* ---------------------推薦商品------------------- */
 .pro_recommend{
-    /* border: 2px solid; */
-    padding-top: 80px;
+    padding-top: 150px;
+    margin-bottom: 100px;
 }
 
 .slide_icon{
-    /* border: 2px solid; */
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -122,7 +122,7 @@
     background-color: #666;
 }
 
-.pro_recommend .pro_out{
+.pro_out{
     display: flex;
     margin: 0 auto;
 }
@@ -130,15 +130,14 @@
 .pro_out .fruit_box{
     border: 1px solid #E5E5E5;
     list-style: none;
-    width: 260px;
-    height: 400px;
+    width: 250px;
     flex-grow: 1;
     margin-right: 100px;
     text-align: center;
 }
 
 .pro_out .fruit_box img{
-    width: 250px;
+    width: 200px;
     margin: 0 auto;
     margin-bottom: 20px;
 }
@@ -147,7 +146,9 @@
     margin-right: 0;
 }
 
-/* .price_cart-out{} */
+.price_cart-out{
+    margin-bottom: 20px;
+}
 
 .fruit_box .pro_name{
     margin-bottom: 10px;
@@ -160,17 +161,6 @@
     text-decoration: none;
 }
 
-.fruit_box .price_cart {
-    display: inline-flex;
-    align-items: center;
-}
-
-.fruit_box .price_cart .price1{
+.fruit_box .price1{
    font-size: 1.2rem;
-   margin-right: 20px;
-}
-
-.fruit_box .price_cart img{
-    display: block;
-    width: 50px;
 }

@@ -1,9 +1,8 @@
 .user_all{
     width: 70%;
     margin: 0 auto;
-    padding: 80px 0 80px;
+    padding: 100px 0 100px;
     font-size: 1rem;
-    font-weight: bold;
     display: flex;
     justify-content: center;
 }
@@ -24,19 +23,19 @@
 }
 
 .user_login li{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .email{
     width: 300px;
-	height: 30px;
+	height: 40px;
 	border: 1px solid #ccc;
 	outline: 0;
 }
 
 .password{
     width: 300px;
-	height: 30px;
+	height: 40px;
 	border: 1px solid #ccc;
 	outline: 0;
 }
@@ -47,17 +46,17 @@
     color: #333;
 }
 
-.login_click{
+.send{
+    font-size: 1rem;
+    color: #fff;
     background-color: #005B3A;
     width: 100px;
+    height: 30px;
     margin: 0 auto;
+    border: none;
+    cursor: pointer;
 }
 
-.login_click a{
-    display: block;
-    color: #fff;
-    text-decoration: none;
-}
 
 /* ---------------------------會員註冊------------------------------ */
 /* .user_register{} */
@@ -67,26 +66,12 @@
 }
 
 .user_register li{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .user-name{
     width: 300px;
-	height: 30px;
-	border: 1px solid #ccc;
-	outline: 0;
-}
-
-.email{
-    width: 300px;
-	height: 30px;
-	border: 1px solid #ccc;
-	outline: 0;
-}
-
-.password{
-    width: 300px;
-	height: 30px;
+	height: 40px;
 	border: 1px solid #ccc;
 	outline: 0;
 }
@@ -100,6 +85,8 @@
 .login_click{
     background-color: #005B3A;
     width: 100px;
+    height: 40px;
+    line-height: 40px;
     margin: 0 auto;
 }
 

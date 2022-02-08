@@ -23,7 +23,6 @@
 .notice{
     border: 2px solid #E77114;
     font-size: 1rem;
-    font-weight: bold;
     color: #333;
     padding: 30px;
 }
@@ -76,7 +75,6 @@
     height: 200px;
     
     font-size: 1rem;
-    font-weight: bold;
     color: #333;
     line-height: 3;
     display: flex;

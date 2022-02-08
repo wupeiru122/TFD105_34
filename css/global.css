@@ -1,5 +1,36 @@
 @import url('reset.css');
 
+/* -------------------body規範------------------------- */
+
+*{
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Noto Sans TC', '微軟正黑體', Arial;
+    background-color: #fff;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.primary_bg{
+    width: 1200px;/*固定寬度*/
+    margin: 0 auto;
+} 
+
 /*字體規範*/
 .basic_font{
     font-size: 15px;
@@ -8,18 +39,25 @@
 .h1_title h1{
     font-size: 3rem;
     color: #fff;
-    font-weight: bold;
     line-height: 500px;
     text-align: center;   
 }
 
 .h2_title h2{
     font-size: 2rem;
-    color: #005B3A;
     font-weight: bold;
-    border-left: 5px solid;
-    padding-left: 10px;
+    color: #005B3A;
+
+    /* border-left: 5px solid;
+    padding-left: 10px; */
     margin-bottom: 50px;
+}
+
+.h2_title h2::before{
+    content: '';
+    border: 3px solid;
+    background-color: #005B3A;
+    margin-right: 10px;
 }
 
 .h3_title{
@@ -30,27 +68,12 @@
     text-align: center;                 
 }
 
-/*字體顏色*/
-.primary_font{
-    color: #fff;
-}
-
-.second_font{
-    color: #005B3A;
-}
-
-.black_font{
-    color: #333;
-}
-
 
 /* ----------------導覽列--------------------- */
 .top-sel{
-    min-width: 1263px;
     width: 100%;
     height: 100px;
     background-color: #fff;
-    border-bottom: 1px solid #ccc;
 
     position: sticky;
     top: 0;
@@ -59,7 +82,7 @@
 
 .main-sel{
     display: block;
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
 
     display: flex; 
@@ -71,6 +94,7 @@
     display: block;
     width: 100px;
     text-align: center;
+    padding: 5px;
 }
 
 .main-sel .nav-list{
@@ -91,13 +115,12 @@
     text-decoration: none;
     text-align: center;
     color: #005B3A;
-    font-weight: bold;
 
 }
 
 .nav-list li img{
     display: block;
-    width: 40px;
+    width: 50px;
 }
 
 .nav-list li:nth-last-child(-n+2){
@@ -106,10 +129,6 @@
     margin-left: 30px;
 }
 
-/* .main-sel li a:hover{
-    border-bottom: 3px solid #E77114;
-} */
-
 .main-sel li:nth-last-child(-n+2) a:hover{
     border-bottom: 0;
 }   
@@ -117,16 +136,17 @@
 
 /* --------------------頁尾---------------------------- */
 .footer{
-    min-width: 1263px;
     width: 100%;
-    /* height: 150px; */
+    height: 150px;
     background-color: #005B3A;
     text-align: center;
-    padding: 30px;
+    padding-top: 30px;
     margin: 0 auto;
 }
 
 .footer-list{
+    width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,53 +162,4 @@
     line-height: 2;
 }
 
-/* -------------------body規範------------------------- */
 
-*{
-    box-sizing: border-box;
-}
-
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-
-
-body{
-    font-family: '思源黑體', '微軟正黑體', Arial;
-    background-color: #fff;
-    font-size: 15px;
-    line-height: 1.5;
-    margin: 0;
-}
-
-.wrapper{
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-}
-
-
-.primary_bg{
-    width: 1200px;/*固定寬度*/
-    margin: 0 auto;
-} 
-
-/* .scroll_top img{
-    background-color: rgba(255, 255, 255, 0.848);
-    width: 55px;
-    position: fixed;
-    bottom: -95px;
-    right: 0;
-    z-index: 1;
-}
-  
- @media (max-width: 576px) {
-    .scroll_top img{
-      width: 4rem;
-      z-index: 10;
-    }
-}
-  
-.scroll_top.show img{
-    bottom: 20px;
-}  */
