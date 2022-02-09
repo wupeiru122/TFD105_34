@@ -234,7 +234,9 @@
 }
 
 .fas, .far{
-    margin-right: 15px;
+    width: 25px;
+    text-align: center;
+    margin-right: 10px;
 }
 
 .map iframe{
@@ -243,5 +245,3 @@
     margin-left: auto;
 }
 
-
-/* --------------------頁尾---------------------------- */
