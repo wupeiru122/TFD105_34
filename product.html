@@ -2,7 +2,8 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/product.css">
     <title>Product</title>
@@ -11,34 +12,38 @@
     
     <div class="wrapper">
         
-        <div class="top-sel">
-            <nav class="main-sel"><!-- 主選單 -->
-                <a href="./index.html"><img src="./img_global/logo1.svg" alt=""></a>
+        <header class="header">
+            <a href="./index.html"><img class="logo" src="./img_global/logo3.svg" alt=""></a>
+    
+            <!-- for RWD -->
+            <button class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
+    
+            <nav class="main_nav">
                 <ul class="nav-list">
                     <li><a href="./about.html">關於我們</a></li>
                     <li><a href="./product.html">商品專區</a></li>
                     <li><a href="./pick_project.html">採果行程</a></li>
                     <li><a href="./contact.html">聯絡我們</a></li>
-                    <li><a href="./user.html"><img src="./img_global/UserCircle.svg" alt=""></a></li>
-                    <li><a href="./shopping_cart.html"><img src="./img_global/Shopping_Cart.svg" alt=""></a></li>
-                </ul>                
+                    <li><a href="./user.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="./shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
             </nav>
-        </div>
+               
+        </header>
 
         <div class="banner">  <!--banner大圖-->  
-            <span class="h1_title"><h1>商品專區</h1></span>
+            <h1 class="h1_title">商品專區</h1>
         </div>
 
         <article class="primary_bg"><!--框架規範-->
 
-            <nav class="tag_row"><!--上方標示頁面-->
-                <span><a href="./index.html">首頁</a> | <a href="#">商品專區</a></span>
-            </nav>
             <main class="pro_all">
                 <aside class="product-menu"><!--側邊欄-->
                     <ul>
-                        <li>商品分類</li>
-                        <hr>
                         <li><a href="#">水果禮盒</a></li>
                         <li><a href="#">果乾</a></li>
                         <li><a href="#">果醬</a></li>
@@ -50,7 +55,7 @@
                     <ul>
                         <li class="item">
                             <div class="product_info">
-                                <a href="./product_detail.html"><img src="./img03/giftbox-a.jpg" alt=""></a>
+                                <a href="./product_detail.html"><img src="./img03/giftbox-a.png"></a>
                                 <div class="price_cart">
                                     <p class="name"><a href="./product_detail.html">禮盒A(10入/箱)</a></p>
                                     <span class="price" >NT$1200</span>
@@ -61,7 +66,7 @@
                             <div class="product_info">
                                 <a href="./product_detail.html"><img src="./img03/giftbox-b.jpg" alt=""></a>
                                 <div class="price_cart">
-                                    <p class="name"><a href="#">禮盒B(10入/箱)</a></p>
+                                    <p class="name"><a href="./product_detail.html">禮盒B(10入/箱)</a></p>
                                     <span class="price" >NT$1200</span>
                                 </div>
                             </div>
@@ -70,7 +75,7 @@
                             <div class="product_info">
                                 <a href="./product_detail.html"><img src="./img03/giftbox-c.jpg" alt=""></a>
                                 <div class="price_cart">
-                                    <p class="name"><a href="#">禮盒C(10入/箱)</a></p>
+                                    <p class="name"><a href="./product_detail.html">禮盒C(10入/箱)</a></p>
                                     <span class="price" >NT$1200</span>
                                 </div>
                             </div>
@@ -79,7 +84,7 @@
                             <div class="product_info">
                                 <a href="./product_detail.html"><img src="./img03/giftbox-d.jpg" alt=""></a>
                                 <div class="price_cart">
-                                    <p class="name"><a href="#">禮盒D(10入/箱)</a></p>
+                                    <p class="name"><a href="./product_detail.html">禮盒D(10入/箱)</a></p>
                                     <span class="price">NT$1200</span>
                                 </div>
                             </div>
@@ -88,7 +93,7 @@
                             <div class="product_info">
                                 <a href="./product_detail.html"><img src="./img03/giftbox-e.jpg" alt=""></a>
                                 <div class="price_cart">
-                                    <p class="name"><a href="#">禮盒E(10入/箱)</a></p>
+                                    <p class="name"><a href="./product_detail.html">禮盒E(10入/箱)</a></p>
                                     <span class="price" >NT$1200</span>
                                 </div>
                             </div>
@@ -97,34 +102,34 @@
                             <div class="product_info">
                                 <a href="./product_detail.html"><img src="./img03/giftbox-f.jpg" alt=""></a>
                                 <div class="price_cart">
-                                    <p class="name"><a href="#">禮盒F(10入/箱)</a></p>
+                                    <p class="name"><a href="./product_detail.html">禮盒F(10入/箱)</a></p>
                                     <span class="price" >NT$1200</span>
                                 </div>
                             </div>
                         </li>
                         <li class="item">
                             <div class="product_info">
-                                <a href="./product_detail.html"><img src="./img03/giftbox-g.jpg" alt=""></a>
+                                <a href="./product_detail.html"><img src="./img03/giftbox-g.png" alt=""></a>
                                 <div class="price_cart">
-                                    <p class="name"><a href="#">禮盒G(10入/箱)</a></p>
+                                    <p class="name"><a href="./product_detail.html">禮盒G(10入/箱)</a></p>
                                     <span class="price" >NT$1200</span>
                                 </div>
                                 </div>
                         </li>
                         <li class="item">
                             <div class="product_info">
-                                <a href="./product_detail.html"><img src="./img03/giftbox-h.jpg" alt=""></a>
+                                <a href="./product_detail.html"><img src="./img03/giftbox-h.png" alt=""></a>
                                 <div class="price_cart">
-                                    <p class="name"><a href="#">禮盒H(10入/箱)</a></p>
+                                    <p class="name"><a href="./product_detail.html">禮盒H(10入/箱)</a></p>
                                     <span class="price" >NT$1200</span>
                                 </div>
                             </div>
                         </li>
                         <li class="item">
                             <div class="product_info">
-                                <a href="./product_detail.html"><img src="./img03/giftbox-i.jpg" alt=""><a href="./product_detail.html"></a>
+                                <a href="./product_detail.html"><img src="./img03/giftbox-i.png" alt=""><a href="./product_detail.html"></a>
                                 <div class="price_cart">
-                                    <p class="name"><a href="#">禮盒I(10入/箱)</a></p>
+                                    <p class="name"><a href="./product_detail.html">禮盒I(10入/箱)</a></p>
                                     <span class="price">NT$1200</span>
                                 </div>
                             </div>
@@ -133,7 +138,7 @@
                             <div class="product_info">
                                 <a href="./product_detail.html"><img src="./img03/giftbox-j.webp" alt=""></a>
                                 <div class="price_cart">
-                                    <p class="name"><a href="#">禮盒J(10入/箱)</a></p>
+                                    <p class="name"><a href="./product_detail.html">禮盒J(10入/箱)</a></p>
                                     <span class="price" >NT$1200</span>
                                 </div>
                             </div>
@@ -142,7 +147,7 @@
                             <div class="product_info">
                                 <a href="./product_detail.html"><img src="./img03/giftbox-k.webp" alt=""></a>
                                 <div class="price_cart">
-                                    <p class="name"><a href="#">禮盒K(10入/箱)</a></p>
+                                    <p class="name"><a href="./product_detail.html">禮盒K(10入/箱)</a></p>
                                     <span class="price" >NT$1200</span>
                                 </div>
                             </div>
@@ -151,7 +156,7 @@
                             <div class="product_info">
                                 <a href="./product_detail.html"><img src="./img03/giftbox-l.webp" alt=""></a>
                                 <div class="price_cart">
-                                    <p class="name"><a href="#">禮盒L(10入/箱)</a></p>
+                                    <p class="name"><a href="./product_detail.html">禮盒L(10入/箱)</a></p>
                                     <span class="price" >NT$1200</span>
                                 </div>
                             </div>
@@ -177,11 +182,10 @@
         </article>
 
         <footer class="footer"><!--頁尾-->
-
             <ul class="footer-list">
-                <li><a href="#"><img src="./img_global/facebook.png" alt=""></a></li>
-                <li><a href="#"><img src="./img_global/email.png" alt=""></a></li>
-                <li><a href="#"><img src="./img_global/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="./img_global/IG.svg" alt=""></a></li>
+                <li><a href=""><img src="./img_global/email.svg" alt=""></a></li>
+                <li><a href=""><img src="/img_global/facebook.svg" alt=""></a></li> 
             </ul>
             <p>555 南投縣魚池鄉金天巷111號 | 電話: (+886) 12340612</p>
             <p>本網站為緯育TibaMe前端設計工程師班第74期學員專題作品，本平台僅供學習、展示之用。參考資源:錦普觀光果園、農遊超市、農業易遊網。</p>
@@ -189,5 +193,24 @@
 
 
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        // JavaScript 漢堡樣式版本
+        document.addEventListener("DOMContentLoaded", function(){    
+            var btn_hamburger = document.getElementsByClassName("hamburger")[0];
+            btn_hamburger.addEventListener("click", function(){
+                this.classList.toggle("is-active");
+            });       
+        });
+
+        // 點擊按鈕，選單縮放
+        $("button.hamburger").on("click", function(){
+        $("nav.main_nav").slideToggle();
+        });
+
+    </script>
+    
 </body>
 </html>

@@ -2,7 +2,8 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/user.css">
     <title>User</title>
@@ -10,75 +11,123 @@
 <body>
     <div class="wrapper">
 
-        <div class="top-sel">
-            <nav class="main-sel"><!-- 主選單 -->
-                <a href="./index.html"><img src="./img_global/logo1.svg" alt=""></a>
+        <header class="header">
+            <a href="./index.html"><img class="logo" src="./img_global/logo3.svg" alt=""></a>
+    
+            <!-- for RWD -->
+            <button class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
+    
+            <nav class="main_nav">
                 <ul class="nav-list">
                     <li><a href="./about.html">關於我們</a></li>
                     <li><a href="./product.html">商品專區</a></li>
                     <li><a href="./pick_project.html">採果行程</a></li>
                     <li><a href="./contact.html">聯絡我們</a></li>
-                    <li><a href="./user.html"><img src="./img_global/UserCircle.svg" alt=""></a></li>
-                    <li><a href="./shopping_cart.html"><img src="./img_global/Shopping_Cart.svg" alt=""></a></li>
-                </ul>                
-            </nav>
-        </div>
+                    <li><a href="./user.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="./shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>           
+        </header>
 
         <article class="primary_bg"><!--框架規範-->
 
-            <section class="user_all">
-                <div class="user_login"><!--會員登入-->
-                    <div class="h2_title"><h2>會員登入</h2></div>
-                    <ul>
-                        <li>
-                            <input class="email" type="text" placeholder="電子郵件">
-                        </li>
-                        <li>
-                            <input class="password" type="text" placeholder="密碼">
-                        </li>
-                        <li>
-                            <div class="remind"><a href="#">忘記密碼</a> | <a href="#">尚未註冊</a></div>
-                        </li>
-                        <li>
-                            <input class="send" type="submit" value="登入">
-                        </li>
-                    </ul>    
+            <div class="login-wrap">
+                <div class="login-html">
+                    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">登入</label>
+                    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">註冊</label>
+                    <div class="login-form">
+                        <div class="sign-in-htm">
+                            <div class="group">
+                                <label for="user" class="label">信箱</label>
+                                <input id="user" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">密碼</label>
+                                <input id="pass" type="password" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <input id="check" type="checkbox" class="check" checked>
+                                <label for="check"><span class="icon"></span>記住我</label>
+                            </div>
+                            <div class="group">
+                                <input type="submit" class="button" value="登入">
+                            </div>
+                            <div class="hr"></div>
+                            <div class="foot-lnk">
+                                <a href="#forgot">忘記密碼?</a>
+                            </div>
+                        </div>
+                        <div class="sign-up-htm">
+                            <div class="group">
+                                <label for="user" class="label">帳號名稱</label>
+                                <input id="user" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">信箱</label>
+                                <input id="pass" type="password" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">密碼</label>
+                                <input id="pass" type="password" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">確認密碼</label>
+                                <input id="pass" type="text" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <input type="submit" class="button" value="註冊">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="user_register"><!--會員註冊-->
-                    <div class="h2_title"><h2>會員註冊</h2></div>
-                    <ul>
-                        <li>
-                            <input class="user-name" type="text" placeholder="帳號名稱">
-                        </li>
-                        <li>
-                            <input class="email" type="text" placeholder="電子郵件">
-                        </li>
-                        <li>
-                            <input class="password" type="text" placeholder="密碼">
-                        </li>
-                        <li>
-                            <div class="remind">您的個人數據將用於支持您在整個網站上的體驗、<br>管理對您帳戶的訪問以及用於我們的 隱私權政策。</div>
-                        </li>
-                        <li>
-                            <input class="send" type="submit" value="註冊">
-                        </li>
-                    </ul>    
-                </div>
-            </section>
+            </div>
 
         </article>
 
         <footer class="footer"><!--頁尾-->
             <ul class="footer-list">
-                <li><a href="#"><img src="./img_global/facebook.png" alt=""></a></li>
-                <li><a href="#"><img src="./img_global/email.png" alt=""></a></li>
-                <li><a href="#"><img src="./img_global/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="./img_global/IG.svg" alt=""></a></li>
+                <li><a href=""><img src="./img_global/email.svg" alt=""></a></li>
+                <li><a href=""><img src="/img_global/facebook.svg" alt=""></a></li> 
             </ul>
             <p>555 南投縣魚池鄉金天巷111號 | 電話: (+886) 12340612</p>
             <p>本網站為緯育TibaMe前端設計工程師班第74期學員專題作品，本平台僅供學習、展示之用。參考資源:錦普觀光果園、農遊超市、農業易遊網。</p>
         </footer>
 
     </div>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>     -->
+    <!-- <script>
+        $(function(){
+            var $li = $('ul.tab-title li');
+            $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.tab-inner').hide();
+                
+            $li.click(function(){
+                $($(this).find('a'). attr ('href')).show().siblings ('.tab-inner').hide();
+                $(this).addClass('active'). siblings ('.active').removeClass('active');
+            });
+        });            
+    </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        // JavaScript 漢堡樣式版本
+        document.addEventListener("DOMContentLoaded", function(){    
+            var btn_hamburger = document.getElementsByClassName("hamburger")[0];
+            btn_hamburger.addEventListener("click", function(){
+                this.classList.toggle("is-active");
+            });       
+        });
+
+        // 點擊按鈕，選單縮放
+        $("button.hamburger").on("click", function(){
+        $("nav.main_nav").slideToggle();
+        });
+
+    </script>
 </body>
 </html>

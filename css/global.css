@@ -2,11 +2,11 @@
 
 /* -------------------body規範------------------------- */
 
-*{
-    box-sizing: border-box;
+img{
+    max-width: 100%;
 }
 
-*, ::after, ::before {
+*, ::before, ::after {
     box-sizing: border-box;
 }
 
@@ -15,8 +15,9 @@ body{
     font-family: 'Noto Sans TC', '微軟正黑體', Arial;
     background-color: #fff;
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 0;
+    padding: 0;
 }
 
 .wrapper{
@@ -27,7 +28,7 @@ body{
 
 
 .primary_bg{
-    width: 1200px;/*固定寬度*/
+    width: 1140px;
     margin: 0 auto;
 } 
 
@@ -36,21 +37,22 @@ body{
     font-size: 15px;
 }
 
-.h1_title h1{
+.h1_title{
     font-size: 3rem;
     color: #fff;
+    font-weight: bold;
     line-height: 500px;
     text-align: center;   
 }
 
-.h2_title h2{
+.h2_title{
     font-size: 2rem;
     font-weight: bold;
     color: #005B3A;
     margin-bottom: 50px;
 }
 
-.h2_title h2::before{
+.h2_title::before{
     content: '';
     border: 3px solid;
     background-color: #005B3A;
@@ -66,97 +68,311 @@ body{
 }
 
 
-/* ----------------導覽列--------------------- */
-.top-sel{
-    width: 100%;
-    height: 100px;
-    background-color: #fff;
+/*=============================漢堡標示===============================*/
+.hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible; 
+}
+.hamburger:hover {
+      opacity: 0.7; 
+}
+.hamburger.is-active:hover {
+      opacity: 0.7; 
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after{
+      background-color: #005B3A;
+}
+  
+
+.hamburger-box {
+    /* border: 1px solid; */
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    position: relative; 
+}
+  
+.hamburger-inner{
+    display: block;
+    top: 50%;
+    margin-top: -2px; 
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      width: 30px;
+      height: 2.5px;
+      background-color: #005B3A;
+      border-radius: 4px;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 0.2s;
+      transition-timing-function: ease; 
+}
+.hamburger-inner::before, .hamburger-inner::after {
+      content: "";
+      display: block; 
+}
+.hamburger-inner::before{
+      top: -10px; 
+}
+.hamburger-inner::after{
+      bottom: -10px; 
+}
+
+/*
+   * Slider
+   */
+.hamburger--slider .hamburger-inner {
+    top: 2px; 
+}
+.hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s; 
+}
+.hamburger--slider .hamburger-inner::after {
+      top: 20px; 
+}
+  
+.hamburger--slider.is-active .hamburger-inner{
+    transform: translate3d(0, 10px, 0) rotate(45deg); 
+}
+.hamburger--slider.is-active .hamburger-inner::before{
+      transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+      opacity: 0; 
+}
+.hamburger--slider.is-active .hamburger-inner::after{
+      transform: translate3d(0, -20px, 0) rotate(-90deg);
+} 
+
+.hamburger--slider{
+    /* border: 2px solid; */
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 行動版時，將按鈕顯示出來 */
+@media screen and (max-width: 767.98px){
+    .hamburger--slider{
+      display: inline-block;
+    }
+}
+/*===================================header==================================*/
+header.header{
+    font-family: 'Noto Sans TC', '微軟正黑體', Arial;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 55;
+    background-color: #fff;
 }
 
-.main-sel{
+@media screen and (max-width: 767.98px){
+    header.header{    
+      display: block;
+    }
+    header.header img.logo{
+        display: block;
+    }
+}
+
+header.header img.logo{
+    /* border: 1px solid yellow; */
     display: block;
-    width: 1200px;
-    margin: 0 auto;
-
-    display: flex; 
-    align-items: center;
-    justify-content: center;
+    width: 200px;
+    height: auto;
+    padding: 10px;
 }
 
-.main-sel a img{
-    display: block;
-    width: 100px;
-    text-align: center;
-    padding: 5px;
+nav.main_nav{
+    /* border: 2px solid blue; */
+    width: calc(100% - 200px);
+    position: absolute;
+    right: 0;
+    padding-left: 100px;
 }
 
-.main-sel .nav-list{
-    width:900px;
+@media screen and (min-width: 768px){
+    nav.main_nav{
+      display: block !important;
+    }
+}
+
+@media screen and (max-width: 767.98px){
+    nav.main_nav{    
+      display: none;
+      width: 100%;
+      background-color: #fff;
+      padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    nav.main_nav{
+        padding-left: 0;
+    }
+}
+  
+ul.nav-list{
+    /* border: 1px solid red; */
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center; 
-
-    margin-left: auto;
 }
 
-.main-sel .nav-list li{
+@media screen and (max-width: 767.98px){
+    ul.nav-list{
+      display: block;
+      text-align: center;
+    }
+}
+
+ul.nav-list > li{
+    /* border: 2px solid green; */
     flex-grow: 1;
-    font-size: 1.2em;    
-}
-
-.nav-list li a{
-    text-decoration: none;
     text-align: center;
+    margin-left: 0px;
+}
+
+ul.nav-list > li > a{
+    text-decoration: none;
     color: #005B3A;
-
 }
 
-.nav-list li img{
-    display: block;
-    width: 50px;
-}
-
-.nav-list li:nth-last-child(-n+2){
+ul.nav-list > li:nth-last-child(-n+2){
     flex-grow: 0;
-    flex-basis: 30px;
-    margin-left: 30px;
+    width: 50px;
+    margin-right: 20px;
 }
 
-.main-sel li:nth-last-child(-n+2) a:hover{
-    border-bottom: 0;
-}   
+nav.main_nav ul.nav-list > li > a > .fa-solid{
+    font-size: 1.6rem;
+ }
+
+/* 行動版時，調整列表樣式 */
+@media screen and (max-width: 767.98px){
+    ul.nav-list > li{
+      display: block;
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: solid #005B3A 1px;
+    }
+    ul.nav-list > li:last-child{
+        border-bottom: none;
+    }
+
+    ul.nav-list > li:nth-last-child(-n+2){
+        width: 100%;
+    }
+
+    ul.nav-list > li > a{
+        position: relative;/*給偽元素定位*/
+    }
+    
+}  
 
 
 /* --------------------頁尾---------------------------- */
 .footer{
+    /* border: 2px solid yellow; */
     width: 100%;
-    height: 150px;
+    height: 200px;
     background-color: #005B3A;
     text-align: center;
-    padding-top: 30px;
+    padding: 30px;
     margin: 0 auto;
 }
 
-.footer-list{
-    width: 1200px;
+ul.footer-list{
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.footer-list li img{
+ul.footer-list li > a{
+    display: block;
     width: 40px;
-    margin-left: 60px;
+    color: #fff;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+ul.footer-list li:last-child > a{
+    margin-right: 0;
 }
 
 .footer p{
     color: #fff;
     line-height: 2;
+    margin: 10px 0;
 }
 
 
+@media screen and (max-width: 575.98px){
+    article.primary_bg{
+      width: 90%;
+    }
+    .h2_title{
+        font-size: 1.6rem;
+    }
+    .h3_title{
+        font-size: 1.6rem;
+    }
+    .footer{
+        height: auto;
+    }
+}
+  
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    article.primary_bg{
+      width: 90%;
+    }
+}
+  
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    article.primary_bg{
+      width: 90%;
+    }
+    /* .footer p{
+        border: 1px solid;
+        width: 90%;
+        margin: 10px auto;
+    } */
+}
+  
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    article.primary_bg{
+      width: 960px;
+    }
+}
+  
+@media screen and (min-width: 1200px) and (max-width: 1399.98px){
+    article.primary_bg{
+      width: 1140px;
+    }
+}

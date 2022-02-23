@@ -2,98 +2,149 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/style.css">
+    
     <title>Home</title>
+
+    <!-- 1.把slick資料夾放入專案 2.貼上html 3.建立一個slick.js嵌入 4.slick-theme.css可更改樣式-->
+    <!-------------- 開始 2.貼在head，自動輪播 -------------->
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+
+    <!-- 2.更改箭頭及點點樣式，自動輪播 -->
+    <!-- Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+     <!-------------- 結束 2.貼在head，自動輪播 -------------->
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="wrapper">
 
-        <div class="top-sel">
-            <nav class="main-sel"><!-- 主選單 -->
-                <a href="./index.html"><img src="./img_global/logo1.svg" alt=""></a>
+        <header class="header">
+            <a href="./index.html"><img class="logo" src="./img_global/logo3.svg" alt=""></a>
+    
+            <!-- for RWD -->
+            <button class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
+    
+            <nav class="main_nav">
                 <ul class="nav-list">
                     <li><a href="./about.html">關於我們</a></li>
                     <li><a href="./product.html">商品專區</a></li>
                     <li><a href="./pick_project.html">採果行程</a></li>
                     <li><a href="./contact.html">聯絡我們</a></li>
-                    <li><a href="./user.html"><img src="./img_global/UserCircle.svg" alt=""></a></li>
-                    <li><a href="./shopping_cart.html"><img src="./img_global/Shopping_Cart.svg" alt=""></a></li>
-                </ul>                
+                    <li><a href="./user.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="./shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
             </nav>
-        </div>
+               
+        </header>
 
         <div class="banner">  <!--banner大圖-->  
-            <span class="h1_title"><h1>一起採果趣!</h1></span>
+            <h1 class="h1_title">一起採果趣!</h1>
+            <!-- <div class="go_shineMuscat"><a href="#"><img src="./img01/fruits_basket.png"></a></div> -->
         </div>
 
         <article class="primary_bg"><!--框架規範-->
 
             <div class="about"><!--關於我們-->      
-                <div class="h2_title"><h2>關於我們</h2></div>
-
-                <div class="go_shineMuscat"><a href="#"><img src="./img01/fruits_basket.png"></a></div>
+                <h2 class="h2_title">關於我們</h2>
 
                 <div class="about-text">
-                    <div class="orchard"><img src="./img01/orchard.png" alt=""></div>
-                    <span class="about-text_btn">
-                        <p>果然園區位於四季水果豐產的魚池地區，目前種植的水果有高接水梨、柑橘、紅心芭樂、金棗、桑椹、金桔、柿子等四季水果。</p>
+                    <img class="orchard" src="./img01/orchard.png" alt="">
+                    <p class="about-text_btn">
+                        <span>果然園區位於四季水果豐產的魚池地區，目前種植的水果有高接水梨、柑橘、紅心芭樂、金棗、桑椹、金桔、柿子等四季水果。</span>
                         <a href="./about.html">看更多</a>
-                    </span>
-                    <div class="tree"><img src="./img01/season_list_img01.jpg" alt=""></div>
+                    </p>
+                    <img class="tree" src="./img01/season_list_img01.jpg" alt="">
                 </div>
             </div>
 
             <section class="fruit-project"><!--採果行程-->
 
-                <div class="h2_title"><h2>當季採果行程</h2></div>
+                <h2 class="h2_title">當季採果行程</h2>
 
                 <ul>
-                    <li class="item1"><span>紅心芭樂8月至隔年2月</span></li>
+                    <li class="item1"><span>芭樂8月至隔年2月</span></li>
                     <li class="item2"><span>柑橘11月至隔年2月</span></li>
-                    <li class="item3"><span>香水檸檬8月至隔年2月</span></li>
+                    <li class="item3"><span>檸檬8月至隔年2月</span></li>
                 </ul>
             </section>
 
-        
-            <section class="product_list"><!--商品列表-->
-                <div class="h2_title"><h2>熱銷商品</h2></div>
-                <div class="slide_icon">
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    <ul class="pro_out">
-                        <li class="fruit_box">
-                            <a href="#" ><img src="./img01/orange-jam.png" alt=""></a>
-                            <div class="price_cart-out">
-                                <div class="pro_name"><a href="#">橘子果醬(3罐組)</a></div>
-                                <span class="price1">NT$600</span>
-                            </div>
-                        </li>
-                            
-                        <li class="fruit_box">
-                            <a href="#"><img src="./img01/pineapple-jam.png" alt=""></a>
-                            <div class="price_cart-out">
-                                <div class="pro_name"><a href="#">鳳梨果醬(3罐組)</a></div>
-                                <span class="price1">NT$600</span>
-                            </div>
-                        </li>
-                        <li class="fruit_box">
-                            <a href=""><img src="./img01/jujube-jam.png" alt=""></a>
-                            <div class="price_cart-out">
-                                <div class="pro_name"><a href="#">金棗果醬(3罐組)</a></div>
-                                <span class="price1">NT$600</span>
-                            </div>
-                        </li>
-                    </ul>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+            
+            <!-------------- 2.熱銷商品，自動輪播 -------------->
+            <h2 class="h2_title">熱銷商品</h2>
+            <section class="variable slider">                
+                <div>
+                    <li class="fruit_box">
+                        <div class="products_img">
+                            <a href="./product_detail.html"><img src="./img01/kw-jam.png"></a>
+                        </div>
+                        <div class="price_cart-out">
+                            <div class="pro_name"><a href="./product_detail.html">奇異果果醬(3入)</a></div>
+                            <span class="price1">NT$600</span>
+                        </div>
+                    </li>
                 </div>
+                <div>
+                    <li class="fruit_box">
+                        <div class="products_img">
+                            <a href="./product_detail.html"><img src="./img01/sun-jam.png" alt=""></a>
+                        </div>
+                        <div class="price_cart-out">
+                            <div class="pro_name"><a href="./product_detail.html">桑葚果醬(3入)</a></div>
+                            <span class="price1">NT$600</span>
+                        </div>
+                    </li>
+                </div>
+                <div>
+                    <li class="fruit_box">
+                        <div class="products_img">
+                            <a href="./product_detail.html"><img src="./img01/pineapple-jam.png" alt=""></a>
+                        </div>
+                        <div class="price_cart-out">
+                            <div class="pro_name"><a href="./product_detail.html">鳳梨果醬(3入)</a></div>
+                            <span class="price1">NT$600</span>
+                        </div>
+                    </li>
+                </div>
+                <div>
+                    <li class="fruit_box">
+                        <div class="products_img">
+                            <a href="./product_detail.html"><img src="./img01/grape-jam.png" alt=""></a>
+                        </div>
+                        <div class="price_cart-out">
+                            <div class="pro_name"><a href="./product_detail.html">葡萄果醬(3入)</a></div>
+                            <span class="price1">NT$600</span>
+                        </div>
+                    </li>
+                </div>
+                <div>
+                    <li class="fruit_box">
+                        <div class="products_img">
+                            <a href="./product_detail.html"><img src="./img01/strawberry-jam.jpg.png" alt=""></a>
+                        </div>
+                        <div class="price_cart-out">
+                            <div class="pro_name"><a href="./product_detail.html">草莓果醬(3入)</a></div>
+                            <span class="price1">NT$600</span>
+                        </div>
+                    </li>
+                </div>
+                
+
             </section>
+            <!-------------- 2.熱銷商品，自動輪播 -------------->
         
             
 
             <div class="map"><!--交通資訊-->
-                <div class="h2_title"><h2>交通資訊</h2></div>
+                <h2 class="h2_title">交通資訊</h2>
                 <div class="map_content">
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i><span>地址： 555 南投縣魚池鄉金天巷111號</span></i></li>
@@ -109,13 +160,39 @@
 
         <footer class="footer"><!--頁尾-->
             <ul class="footer-list">
-                <li><a href="#"><img src="./img_global/facebook.png" alt=""></a></li>
-                <li><a href="#"><img src="./img_global/email.png" alt=""></a></li>
-                <li><a href="#"><img src="./img_global/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="./img_global/IG.svg" alt=""></a></li>
+                <li><a href=""><img src="./img_global/email.svg" alt=""></a></li>
+                <li><a href=""><img src="/img_global/facebook.svg" alt=""></a></li> 
             </ul>
             <p>555 南投縣魚池鄉金天巷111號 | 電話: (+886) 12340612</p>
             <p>本網站為緯育TibaMe前端設計工程師班第74期學員專題作品，本平台僅供學習、展示之用。參考資源:錦普觀光果園、農遊超市、農業易遊網。</p>
         </footer>
+
+    <!-------------- 開始 2.貼在script，自動輪播 -------------->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+
+    <!-- 3.建立一個slick.js嵌入，自動輪播 -->
+    <script src="./js/slick.js"></script>
+    <!-------------- 結束 2.貼在script，自動輪播 -------------->
+    
+    <script>
+        // JavaScript 漢堡樣式版本
+        document.addEventListener("DOMContentLoaded", function(){
+        
+            var btn_hamburger = document.getElementsByClassName("hamburger")[0];
+            btn_hamburger.addEventListener("click", function(){
+                this.classList.toggle("is-active");
+            });       
+        });
+
+        // 點擊按鈕，選單縮放
+        $("button.hamburger").on("click", function(){
+            $("nav.main_nav").slideToggle();
+        });
+    </script>
     
 </body>
 </html>
+

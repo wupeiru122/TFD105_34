@@ -3,18 +3,39 @@
     background-image: url(../img01/banner1-1.png);
     height: 500px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
+}
+
+@media (max-width: 575.98px){
+    .banner{
+      width: 100%;
+      height: 250px;
+    }
+    .h1_title{
+        line-height: 250px;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .banner{
+        width: 100%;
+        height: 300px;
+    }
+    .h1_title{
+        line-height: 300px;
+        font-size: 2rem;
+    }
 }
 
 /* ----------------------動畫------------------------ */
-.about{
+.banner{
     position: relative;
 }
-
-.go_shineMuscat{
+.banner .go_shineMuscat{
     position: absolute;
-	right: 0px;
-	top: 400px;
+	right: 80px;
+	top: 290px;
 	z-index: 1;
     animation: fuwafuwa 3s infinite linear alternate;
 }
@@ -45,30 +66,34 @@
 
 /* ------------------關於我們------------------ */
 .about{
-    padding-top: 100px;
+    border: 1px solid;
+    padding-top: 80px;
 }
 
 
 .about-text{
+    border: 1px solid red;
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.about-text .orchard img{
+.about-text .orchard{
     display: block;
-    height: 400px;
+    width: 40%;
     margin-right: 100px;
 }
 
 .about-text_btn{
-    font-size: 1.2rem;
-    width: 400px;
+    border: 1px solid blue;
+    width: 350px;
 }
 
-.about-text_btn p{
+.about-text_btn span{
     color: #333;
+    display: block;
     margin-bottom: 30px;
+    font-size: 1.2rem;
 }
 
 .about-text_btn > a{
@@ -81,25 +106,81 @@
     text-decoration: none;
     text-align: center;
     margin: 0 auto;
+    margin-top: 20px;
+
+    transition: all .5s;
+    border-radius: 3px;
+}
+
+.about-text_btn a:after {
+    padding-left: 10px;
+    content: '\f0da';
+    font-family: fontawesome;
 }
 
 .about-text_btn a:hover{
     background-color: #E77114;
+    transform: translate3d(0px,5px,10px);
+    box-shadow: 0 3px 2px rgba(0,0,0,.3);
 }
 
-.about-text .tree img{
+.about-text .tree{
     display: block;
-    width: 200px;
+    width: 15%;
     position: absolute;
     right: 0;
     bottom: 0;
 }
 
+@media screen and (max-width: 575.98px){
+    .about-text{
+        display: block;
+      }
+      .about-text .orchard{
+          width: 70%;
+          margin: 0 auto;
+      }
+      .about-text_btn{
+          width: 70%;
+          margin: 0 auto;
+          margin-top: 20px;
+      }
+      .about-text_btn span{
+          font-size: .9rem;
+      }
+      .about-text_btn > a{
+          font-size: 0.9rem;
+          width: 100px;
+          height: 30px;
+          line-height: 30px;
+      }
+}
+  
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .about-text{
+      display: block;
+    }
+    .about-text .orchard{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .about-text_btn{
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    .about-text .tree{
+      display: none;
+    }
+}
 
 
 /* -----------------------當季採果行程------------------------ */
 .fruit-project{
-    padding-top: 100px;
+    padding-top: 80px;
+    margin-bottom: 80px;
 } 
 
 .fruit-project ul{
@@ -111,13 +192,21 @@
 .fruit-project li{
     background-size: cover;
     background-position: center center;
-    transition: .5s;
+    transition: .6s;
 
-    font-size: 1.2rem;
-    font-family: Noto Sans TC;
+    
     color: #fff;
     text-align: center;
     padding-top: 20px;
+}
+
+.fruit-project span{
+    background-size: cover;
+    background-position: center center;
+    transition: .6s;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .fruit-project .item1{
@@ -137,66 +226,97 @@
 
 .fruit-project li:hover{
     flex-grow: 5;
-}  
+}   
+
+@media screen and (max-width: 575.98px){
+    .fruit-project > ul{
+        width: 100%;
+        height: auto;
+        display: block;
+        border: 1px solid blue;
+      }
+      .fruit-project .item1{
+          background-image: url(../img01/grava_pro.jpg);
+          height: 200px;
+      }
+      
+      .fruit-project .item2{
+          background-image: url(../img01/orange_pro.jpeg);
+          height: 200px;
+      }
+      
+      .fruit-project .item3{
+          background-image: url(../img01/lemon_pro.png);
+          height: 200px;
+      }
+      .fruit-project li{
+          margin-top: 10px;
+      }
+      .fruit-project span{
+          font-size: 1rem;
+      }
+}
+  
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .fruit-project > ul{
+      width: 100%;
+    }
+    .fruit-project .item1{
+        background-image: url(../img01/grava_pro.jpg);
+        height: 200px;
+    }
+    
+    .fruit-project .item2{
+        background-image: url(../img01/orange_pro.jpeg);
+        height: 200px;
+    }
+    
+    .fruit-project .item3{
+        background-image: url(../img01/lemon_pro.png);
+        height: 200px;
+    }
+    .fruit-project li{
+        margin-right: 10px;
+    }
+}
+  
 
 /* -----------------------熱銷商品------------------------------ */
-.product_list{
-
-    padding-top: 100px;
-}
-
-.slide_icon{
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.fa{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: #333;
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 48px;
-    font-size: 1.5em;
-}
-
-.fa a{
-    text-decoration: none;
-}
-
-.fa:hover{
-    background-color: #666;
-}
-
-.product_list .pro_out{
-    display: flex;
-    margin: 0 auto;
-}
-
-.pro_out .fruit_box{
-    border: 1px solid #E5E5E5;
+.fruit_box{
+    min-width: 100px;
+    border: 1px solid #e5e5e5;
     list-style: none;
-    width: 250px;
-    flex-grow: 1;
-    margin-right: 100px;
     text-align: center;
+    padding: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+    margin: 0 auto;
 }
 
-.pro_out .fruit_box img{
-    width: 200px;
+/* ----------商品圖片-------- */
+.products_img img{
+    width: 100px;
     margin: 0 auto;
     margin-bottom: 20px;
+    transition: all 1s;
 }
 
-.pro_out .fruit_box:last-child{
-    margin-right: 0;
+@media screen and (max-width: 575.98px){
+    .products_img img{
+        width: 70px;
+    }
+    .slider{
+        width: 100%;
+    }
 }
 
+.products_img img:hover{
+    opacity: .5;
+    transform:scale(1.1);
+}
+
+/* ---------商品文字-------- */
 .price_cart-out{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .fruit_box .pro_name{
@@ -204,23 +324,59 @@
 }
 
 .fruit_box .pro_name a{
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #333;
     font-weight: bold;
     text-decoration: none;
 }
 
 .fruit_box .price1{
-   font-size: 1.2rem;
+   font-size: 1rem;
 }
+
+
+
+
+/* ------------------------------自動輪播-------------------------------- */
+.slider{
+    border: 2px solid;
+    width: 80%;
+    margin: 0;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+}
+
+.slick-active {
+    opacity: 1;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+
 
 
 /* --------------------------交通資訊------------------------------- */
 .map{
     list-style: none;
     color: #005B3A;
-    padding-top: 100px;
-    margin-bottom: 100px;
+    padding-top: 80px;
+    margin-bottom: 80px;
 }
 
 
@@ -228,7 +384,7 @@
     display: flex;
 }
 
-.map ul{
+.map ul > li > span{
     font-size: 1.2rem;
     line-height: 3;
 }
@@ -241,7 +397,47 @@
 
 .map iframe{
     display: block;
-    width: 700px;
+    width: 50%;
+    height: 300px;
     margin-left: auto;
 }
 
+@media screen and (max-width: 575.98px){
+    .map_content{
+        display: flex;
+        flex-direction: column;
+    }
+    .map iframe{
+        width: 100%;
+        order: -1;
+    }
+    .map ul > li > span{
+        font-size: 1rem;
+    }
+}
+  
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .map_content{
+      display: flex;
+      flex-direction: column;
+    }
+    .map iframe{
+        width: 100%;
+        order: -1;
+    }
+    .map ul > li > span{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    .map_content{
+        display: flex;
+        flex-direction: column;
+      }
+      .map iframe{
+          width: 100%;
+          height: 300px;
+          order: -1;
+      }
+}

@@ -1,5 +1,5 @@
  /* --------------------頁面標示顏色------------------------- */
-.main-sel li:nth-child(3) a{
+ ul.nav-list > li:nth-child(3) a{
     color: #E77114;
 }
  
@@ -8,13 +8,41 @@
     background-image: url(../img05/banner05.png);
     width: 100%;
     height: 500px;
+    border: 1px solid red;
+    font-size: 0;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+@media (max-width: 575.98px){
+    .banner{
+      width: 100%;  
+      height: 250px;
+    }
+    .h1_title{
+        line-height: 250px;
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .banner{
+        width: 100%;
+        height: 300px;
+    }
+    .h1_title{
+        line-height: 300px;
+        font-size: 2rem;
+    }
+}
+
+  
+
 /* --------------------購票摘要--------------------------- */
 .summary{
-    padding-top: 100px;
+    border: 2px solid;
+    padding-top: 30px;
     font-size: 1rem;
     color: #005B3A;
     text-align: center;
@@ -31,10 +59,28 @@
     color: #E77114;
 }
 
+@media (max-width: 575.98px){
+    .banner{
+      width: 100%;
+      height: 250px;
+    }
+    .notice{
+        font-size: .9rem;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .banner{
+        width: 100%;
+        height: 300px;
+    }
+}
+
 
 /* ------------------------採果行程----------------------------- */
-.h3_title .fruit_bg {
-    padding: 40px;
+.h3_title{
+    border: 1px solid;
+    padding: 30px;
     position: relative;
 }
 
@@ -59,23 +105,37 @@
     bottom: 0;
     right: 0;
 }
+
+@media (max-width: 575.98px){
+    .fruit_bg::before,::after{
+      display: none;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .fruit_bg::before,::after{
+        display: none;
+      }
+}
+
+
 .project_list{
-    padding-top: 100px;
+    padding-top: 50px;
     margin-bottom: 100px;
 }
 
 
 .project_list li{
-    background-image: url(../img05/plan_list.png);
+    background-image: url(../img05/plan_list01.png);
+    width: 100%;
     height: 200px;
     
-    font-size: 1rem;
     color: #333;
-    line-height: 3;
     display: flex;
     align-items: center;
-    padding: 20px;
-    margin-bottom: 50px;
+    justify-content: space-between;
+    padding: 30px;
+    margin-bottom: 30px;
 }
 
 .project_list li:last-child{
@@ -83,22 +143,58 @@
 }
 
 .project_list li span{
-    width: 550px;
-}
-
-.pick_ticket{
-    margin-left: 400px;
+    display: block;
+    line-height: 2;
 }
 
 .pick_ticket a{
     text-decoration: none;
     display: block;
     width: 100px;
+    height: 50px;
+    line-height: 50px;
     background-color: #005B3A;
     text-align: center;
     color: #fff;
+    transition: all .5s;
+    border-radius: 3px;
 }
 
 .pick_ticket a:hover{
     background-color: #E77114;
+    transform: translate3d(0px,5px,10px); 
+    box-shadow: 2px 3px 2px rgba(0,0,0,.3);   
+}
+
+@media (max-width: 575.98px){
+    .project_list li{
+        border: 1px solid;
+        padding: 10px;
+        font-size: .8rem;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .project_list li span{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    .pick_ticket a{
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .project_list li{
+        border: 1px solid;
+        padding: 10px;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        position: relative;
+    }
 }

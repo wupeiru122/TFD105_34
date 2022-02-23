@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./user01.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="tab-demo">
+        <ul class="tab-title">
+            <li><a href="#tab01">會員登入</a></li>
+            <li><a href="#tab02">會員註冊</a></li>
+        </ul>
+
+            <div id="tab01" class="tab-inner">
+                <ul>
+                    <li>
+                        <input class="email" type="text" placeholder="電子郵件">
+                    </li>
+                    <li>
+                        <input class="password" type="text" placeholder="密碼">
+                    </li>
+                    <li>
+                        <input class="send" type="submit" value="登入">
+                    </li>
+                    <li>
+                        <a href="#">忘記帳號/密碼</a>
+                    </li>
+                </ul> 
+            </div>
+
+            <div id="tab02" class="tab-inner">
+                <ul>
+                    <li>
+                        <input class="user-name" type="text" placeholder="帳號名稱">
+                    </li>
+                    <li>
+                        <input class="email" type="text" placeholder="電子郵件">
+                    </li>
+                    <li>
+                        <input class="password" type="text" placeholder="密碼">
+                    </li>
+                    <li>
+                        <input class="password-double" type="text" placeholder="再次輸入密碼">
+                   </li>
+                    <li>
+                        <div class="remind">您的個人數據將用於支持您在整個網站上的體驗、<br>管理對您帳戶的訪問以及用於我們的 隱私權政策。</div>
+                    </li>
+                    <li>
+                        <input class="send" type="submit" value="註冊">
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>    
+    <script>
+        $(function(){
+            var $li = $('ul.tab-title li');
+            $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.tab-inner').hide();
+    
+            $li.click(function(){
+                $($(this).find('a'). attr ('href')).show().siblings ('.tab-inner').hide();
+                $(this).addClass('active'). siblings ('.active').removeClass('active');
+            });
+        });
+
+    </script>
+
+
+</body>
+</html>

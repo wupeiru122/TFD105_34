@@ -1,12 +1,13 @@
 /* ---------------------------上方標示頁面--------------------------- */
 .tag_row{
-    /* border: 2px solid; */
-    padding-top: 100px;
+    border: 2px solid;
+    padding-top: 50px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #005B3A;
 }
 .tag_row a{
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
     color: #005B3A;
 }
 
@@ -15,24 +16,84 @@
 }
 
 
-/* ----------------------------商品圖片------------------------------- */
 .pro-del{
+    border: 2px solid;
     display: flex;
+    margin-bottom: 100px;
 }
 
-.pro-del_img{
+/* ----------------------------商品圖片------------------------------- */
+.flexslider{
+    border: 2px solid red;
+    width: 50%;
+    min-width: 200px;
     margin-right: 100px;
 }
 
-.img_top{
-    margin-bottom: 10px;
+.flex-direction-nav a:before {
+    font-size: 30px !important;
 }
 
-.img_under{
-    margin-left: 10px;
+.flex-direction-nav a{
+    top: 40% !important;
+}
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    .flexslider{
+      width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    .flexslider{
+      width: 100%;
+      display: block;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .flexslider{
+      width: 100%;
+      display: block;
+    }
+}
+
+@media screen and (max-width: 575.98px){
+    .flexslider{
+      width: 100%;
+      display: block;
+    }
 }
 
 /* -----------------------------商品文字---------------------------------- */
+.pro-del_info{
+    border: 2px solid red;
+    width: calc(100% - 50%);
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    .pro-del_info{
+      width: 100%;
+      display: block;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .pro-del_info{
+      width: 100%;
+      display: block;
+    }
+}
+
+@media screen and (max-width: 575.98px){
+    .pro-del_info{
+      width: 100%;
+      display: block;
+    }
+}
+
 .mainpro_name{
     font-size: 2rem;
     font-weight: bold;
@@ -40,7 +101,7 @@
 }
 
 .pro_text{
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 .pro_price{
@@ -69,14 +130,14 @@
 
 .cart_submit{
     height: 40px;
-    width: 150px;
+    width: 100px;
     background-color: #005B3A;
     text-align: center;
     line-height: 40px;
 }
 
 .cart_submit > a{
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: block;
     text-decoration: none;
     color: #fff;
@@ -90,64 +151,75 @@
     font-size: 1rem;
 }
 
+/* ---RWD--- */
+@media screen and (max-width: 575.98px){
+    .pro-del{
+      width: 100%;
+      display: block;
+    }
+    .mainpro_name{
+        font-size: 1.6rem;
+    }
+}
+  
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+    .pro-del{
+      width: 100%;
+      display: block;
+    }
+}
+  
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+    .pro-del{
+      width: 100%;
+      display: block;
+    }
+}
+  
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+    .pro-del{
+      width: 100%;
+      /* display: block; */
+      margin: 0 auto;
+    }
+}
+
 /* ---------------------推薦商品------------------- */
-.pro_recommend{
-    padding-top: 100px;
-    margin-bottom: 100px;
-}
-
-.slide_icon{
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.fa{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: #333;
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 48px;
-    font-size: 1.5em;
-}
-
-.fa a{
-    text-decoration: none;
-}
-
-.fa:hover{
-    background-color: #666;
-}
-
-.pro_out{
-    display: flex;
-    margin: 0 auto;
-}
-
-.pro_out .fruit_box{
-    border: 1px solid #E5E5E5;
+.fruit_box{
+    border: 1px solid #e5e5e5;
     list-style: none;
-    width: 250px;
-    flex-grow: 1;
-    margin-right: 100px;
     text-align: center;
+    padding: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+    margin: 0 auto;
 }
 
-.pro_out .fruit_box img{
-    width: 200px;
+/* ----------商品圖片-------- */
+.products_img img{
+    width: 100px;
     margin: 0 auto;
     margin-bottom: 20px;
+    transition: all 1s;
 }
 
-.pro_out .fruit_box:last-child{
-    margin-right: 0;
+@media screen and (max-width: 575.98px){
+    .products_img img{
+        width: 70px;
+    }
+    .slider{
+        /* border: 1px solid; */
+        width: 100%;
+    }
 }
 
+.products_img img:hover{
+    opacity: .5;
+    transform:scale(1.1);
+}
+
+/* ---------商品文字-------- */
 .price_cart-out{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .fruit_box .pro_name{
@@ -155,12 +227,46 @@
 }
 
 .fruit_box .pro_name a{
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #333;
     font-weight: bold;
     text-decoration: none;
 }
 
 .fruit_box .price1{
-   font-size: 1.2rem;
+   font-size: 1rem;
+}
+
+
+
+
+/* ------------------------------自動輪播-------------------------------- */
+.slider{
+    /* border: 2px solid; */
+    width: 80%;
+    margin: 0;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+}
+
+.slick-active {
+    opacity: 1;
+}
+
+.slick-current {
+    opacity: 1;
 }

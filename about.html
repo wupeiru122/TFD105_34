@@ -2,6 +2,8 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/about.css">
     <title>About</title>
@@ -9,63 +11,125 @@
 <body>
     <div class="wrapper">
 
-        <div class="top-sel">
-            <nav class="main-sel"><!-- 主選單 -->
-                <a href="./index.html"><img src="./img_global/logo1.svg" alt=""></a>
+        <header class="header">
+            <a href="./index.html"><img class="logo" src="./img_global/logo3.svg" alt=""></a>
+    
+            <!-- for RWD -->
+            <button class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
+    
+            <nav class="main_nav">
                 <ul class="nav-list">
                     <li><a href="./about.html">關於我們</a></li>
                     <li><a href="./product.html">商品專區</a></li>
                     <li><a href="./pick_project.html">採果行程</a></li>
                     <li><a href="./contact.html">聯絡我們</a></li>
-                    <li><a href="./user.html"><img src="./img_global/UserCircle.svg" alt=""></a></li>
-                    <li><a href="./shopping_cart.html"><img src="./img_global/Shopping_Cart.svg" alt=""></a></li>
-                </ul>                
+                    <li><a href="./user.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="./shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
             </nav>
-        </div>
+               
+        </header>
 
         <div class="banner">  <!--banner大圖-->  
-            <span class="h1_title"><h1>關於我們</h1></span>
+            <h1 class="h1_title">關於我們</h1>
         </div>
 
         <article class="primary_bg"><!--框架規範-->
 
             <div class="about"><!--果園資訊-->      
-                <div class="h2_title"><h2>關於果然</h2></div>
+                <h2 class="h2_title">關於果然</h2>
                 <div class="about-text">
-                    <div class="ab-orchard"><img src="./img02/about_orchard.png" alt=""></div>
-                    <span class="about-text_btn">
-                        <p>位在魚池休閒農業區的果然觀光果園，一年4季皆盛產各式水果，尤其柑橘更是最受歡迎的產物，由於果園主人們堅持無毒耕作，加上熱情的介紹與導覽，讓每位到訪的旅客不僅給予最高評價，更對於他們香甜可口的柑橘流連忘返。</p>
-                    </span>
-                    <div class="ab-fram"><img src="./img02/season_list_img02.jpg" alt=""></div>
+                    <img class="ab-orchard" src="./img02/about_orchard.png" alt="">
+                    <p class="about-text_btn">位在魚池休閒農業區的果然觀光果園，一年4季皆盛產各式水果，尤其柑橘更是最受歡迎的產物，由於果園主人們堅持無毒耕作，加上熱情的介紹與導覽，讓每位到訪的旅客不僅給予最高評價，更對於他們香甜可口的柑橘流連忘返。</p>
+                    <img class="ab-fram" src="./img02/season_list_img02.jpg" alt="">
                 </div>
             </div>
 
             <div class="fru_season"><!--季節採果-->
-                    <div class="h3_title"><h3>季節採果</h3></div>
-                    <div class="season-icon">
-                        <ul>
-                            <li class="btn1"><a href="#"><span>春季3-5月</span></a></li>
-                            <li class="btn2"><a href="#"><span>夏季6-8月</span></a></li>
-                            <li class="btn3"><a href="#"><span>秋季9-11月</span></span></a></li>
-                            <li class="btn4"><a href="#"><span>冬季12-2月</span></a></li>
-                        </ul>
-                        <div class="season-icon_content">
-                            <div class="sea-fru">柑橘 | 秋末冬初正是臺灣柑橘成熟季節<br>盛產期11月至隔年2月</div>
-                            <div class="fru_intro">
-                                <img src="./img02/Rectangle 189.png" alt="">
-                                <div class="intro_con">柑橘由內至外都具有營養及經濟價值，果肉有豐富的維他命Ｃ和礦物質等，可供鮮食之外，也常出現在加工食品上，例如：果汁、果醬、果凍、糖果、蜜餞、沾醬及罐頭等。</div>
+                    <h3 class="h3_title">季節採果</h3>
+                    <div class="tab_css">
+                        <!-- TAB1 打包區塊 start -->
+                        <input id="tab1" type="radio" name="tab" checked="checked"/>
+                        <label for="tab1" class="tab1-1">春季3-5月</label>
+                        <div class="tab_content">
+                            <div class="content-out">           
+                                <p>梅子 | 風味以清酸稱絕，滿口生津而別有風味</p>
+                                <span>盛產期4月</span>               
+                
+                                <div class="fru_intro">
+                                    <img src="./img02/ume3-5.jpg" alt="">
+                                    <p class="intro_con">
+                                        梅子所含的果酸較多，如果生食未成熟的青梅會造成腸胃不適，經過醃漬、曝晒加工之後更適合食用。梅子的加工品項多樣，除梅乾、蜜餞、脆梅、梅醬等，也能用來釀酒。
+                                    </p>
+                                </div>
+                            </div> 
+                        </div>
+                        <!-- TAB1 打包區塊 end -->
+                        
+                        <!-- TAB2 打包區塊 start -->
+                        <input id="tab2" type="radio" name="tab"/>
+                        <label for="tab2" class="tab2-1">夏季6-8月</label>
+                        <div class="tab_content">
+                            <div class="content-out">
+                                <p>梨子 | 含水量達89%，是優質的天然飲料</p>
+                                <span>盛產期6月至9月</span>
+                                <div class="fru_intro">
+                                    <img src="./img02/pear6-8.jpg" alt="">
+                                    <p class="intro_con">
+                                        梨子的含水量達89%，是優質的天然飲料，內含有大量果糖，可迅速被人體吸收，水梨大部份的纖維都在果皮上，連皮一起食用可得到較多完整的纖維化合物。</p>
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                        <!-- TAB2 打包區塊 end -->
+                        
+                        <!-- TAB3 打包區塊 start -->
+                        <input id="tab3" type="radio" name="tab"/>
+                        <label for="tab3" class="tab3-1">秋季9-11月</label>
+                        <div class="tab_content">
+                            <div class="content-out">
+                                <p>紅龍果 | 果肉味甜多汁，果香四溢</p>
+                                <span>盛產期6月至11月</span>
+                                <div class="fru_intro">
+                                    <img src="./img02/dragonfruit9-11.jpg" alt="">
+                                    <p class="intro_con">
+                                        紅龍果是仙人掌科的植物，外表宛如一團炙熱的紅色火球而得名。火龍果屬於涼性水果，在自然狀態下，果實於夏秋成熟，果肉味甜多汁，果香四溢，也因為佈滿了黑色的小籽，所以有人稱為芝麻果。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TAB3 打包區塊 end -->
+                          
+                        <!-- TAB4 打包區塊 start -->
+                        <input id="tab4" type="radio" name="tab"/>
+                        <label for="tab4" class="tab4-1">冬季12-2月</label>
+                        <div class="tab_content">
+                            <div class="content-out">
+                                <p>柑橘 | 秋末冬初正是臺灣柑橘成熟季節</p>
+                                <span>盛產期11月至隔年2月</span>
+                                <div class="fru_intro">
+                                    <img src="./img02/orange12-2.jpg" alt="">
+                                    <p class="intro_con">
+                                        柑橘由內至外都具有營養及經濟價值，果肉有豐富的維他命Ｃ和礦物質等，可供鮮食之外，也常出現在加工食品上，例如：果汁、果醬、果凍、糖果、蜜餞、沾醬及罐頭等。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TAB4 打包區塊 end -->
                     </div>
             </div>
 
             <div class="features"><!--果園特色-->
-                <div class="h2_title"><h2>果園特色</h2></div>
+                <h2 class="h2_title">果園特色</h2>
                 <div class="fea_content">
                     <div class="intro">
                         <div class="intro1a">
                             <p class="intro1_1">一、開放採果</p>
-                            <p class="intro1_2">享受現採鮮吃的樂趣</p>
+                            <p class="intro1_2">開放遊客入園採果丶搭配導覽解說，<br>讓遊客能夠有深度的農業體驗</p>
                             <br>
                             <p class="intro1_1">二、梨樹嫁接體驗</p>
                             <p class="intro1_2">瞭解嫁接技術的演進，學習嫁接工具的操作使用，<br>體驗小雨傘、小雨衣的功用及組裝的樂趣。</p>
@@ -73,7 +137,7 @@
                         <img src="./img02/about_pick.png" alt="">
                     </div>
 
-                    <hr>
+                    <div class="common-line"></div>
 
                     <div class="intro2">
                         <img src="./img02/about_pick2.png" alt="">
@@ -87,17 +151,34 @@
         </article>
 
         <footer class="footer"><!--頁尾-->
-
             <ul class="footer-list">
-                <li><a href="#"><img src="./img_global/facebook.png" alt=""></a></li>
-                <li><a href="#"><img src="./img_global/email.png" alt=""></a></li>
-                <li><a href="#"><img src="./img_global/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="./img_global/IG.svg" alt=""></a></li>
+                <li><a href=""><img src="./img_global/email.svg" alt=""></a></li>
+                <li><a href=""><img src="/img_global/facebook.svg" alt=""></a></li> 
             </ul>
             <p>555 南投縣魚池鄉金天巷111號 | 電話: (+886) 12340612</p>
             <p>本網站為緯育TibaMe前端設計工程師班第74期學員專題作品，本平台僅供學習、展示之用。參考資源:錦普觀光果園、農遊超市、農業易遊網。</p>
         </footer>
 
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        // JavaScript 漢堡樣式版本
+        document.addEventListener("DOMContentLoaded", function(){    
+            var btn_hamburger = document.getElementsByClassName("hamburger")[0];
+            btn_hamburger.addEventListener("click", function(){
+                this.classList.toggle("is-active");
+            });       
+        });
+
+        // 點擊按鈕，選單縮放
+        $("button.hamburger").on("click", function(){
+        $("nav.main_nav").slideToggle();
+        });
+
+    </script>
     
 </body>
 </html>
