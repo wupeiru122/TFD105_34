@@ -41,7 +41,7 @@ body{
     font-size: 3rem;
     color: #fff;
     font-weight: bold;
-    line-height: 400px;
+    line-height: 500px;
     text-align: center;   
 }
 
@@ -174,6 +174,7 @@ body{
       display: inline-block;
     }
 }
+
 /*===================================header==================================*/
 header.header{
     font-family: 'Noto Sans TC', '微軟正黑體', Arial;
@@ -312,89 +313,38 @@ nav.main_nav ul.nav-list > li > a > .fa-solid{
 
     ul.nav-list > li > a{
         position: relative;/*給偽元素定位*/
-    }
-    
+    }    
 }  
 
-
-/* --------------------頁尾---------------------------- */
-.footer{
-    /* border: 2px solid yellow; */
-    width: 100%;
-    height: 200px;
-    background-color: #005B3A;
-    text-align: center;
-    padding: 30px;
-    margin: 0 auto;
+.login_block{
+    display:none; 
+    border: 2px solid blue; 
+    height: 100vh;
+    position:absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    width: 100%; 
+    height: 100vh; 
+    background-color: rgb(51, 51, 51, .7); 
+    z-index: 66;
 }
 
-ul.footer-list{
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.ad_block{
+    /* display:none;  */
+    border: 2px solid red; 
+    display: inline-block; 
+    position: relative; 
+    left: 50%; 
+    transform: translateX(-50%);
 }
 
-ul.footer-list li > a{
+
+.login_block.-on{
     display: block;
-    width: 40px;
-    color: #fff;
-    margin-right: 30px;
-    margin-bottom: 10px;
 }
 
-ul.footer-list li:last-child > a{
-    margin-right: 0;
+.ad_block.-on{
+    display: block;
 }
 
-.footer p{
-    color: #fff;
-    line-height: 2;
-    margin: 10px 0;
-}
-
-
-@media screen and (max-width: 575.98px){
-    article.primary_bg{
-      width: 90%;
-    }
-    .h2_title{
-        font-size: 1.6rem;
-    }
-    .h3_title{
-        font-size: 1.6rem;
-    }
-    .footer{
-        height: auto;
-    }
-}
-  
-@media screen and (min-width: 576px) and (max-width: 767.98px){
-    article.primary_bg{
-      width: 90%;
-    }
-}
-  
-@media screen and (min-width: 768px) and (max-width: 991.98px){
-    article.primary_bg{
-      width: 90%;
-    }
-    /* .footer p{
-        border: 1px solid;
-        width: 90%;
-        margin: 10px auto;
-    } */
-}
-  
-@media screen and (min-width: 992px) and (max-width: 1199.98px){
-    article.primary_bg{
-      width: 960px;
-    }
-}
-  
-@media screen and (min-width: 1200px) and (max-width: 1399.98px){
-    article.primary_bg{
-      width: 1140px;
-    }
-}

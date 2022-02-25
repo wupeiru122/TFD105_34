@@ -1,6 +1,6 @@
 /* ---------------------------上方標示頁面--------------------------- */
 .tag_row{
-    border: 2px solid;
+    /* border: 2px solid; */
     padding-top: 50px;
     margin-bottom: 20px;
     font-size: 1rem;
@@ -17,14 +17,14 @@
 
 
 .pro-del{
-    border: 2px solid;
+    /* border: 2px solid; */
     display: flex;
     margin-bottom: 100px;
 }
 
 /* ----------------------------商品圖片------------------------------- */
 .flexslider{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 50%;
     min-width: 200px;
     margin-right: 100px;
@@ -48,8 +48,9 @@
 
 @media screen and (min-width: 768px) and (max-width: 991.98px){
     .flexslider{
-      width: 100%;
+      width: 90%;
       display: block;
+      margin: 0 auto;
     }
 }
 
@@ -69,14 +70,16 @@
 
 /* -----------------------------商品文字---------------------------------- */
 .pro-del_info{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: calc(100% - 50%);
 }
 
 @media screen and (min-width: 768px) and (max-width: 991.98px){
     .pro-del_info{
-      width: 100%;
+      width: 90%;
       display: block;
+      margin: 0 auto;
+      padding-top: 40px;
     }
 }
 
@@ -101,7 +104,7 @@
 }
 
 .pro_text{
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
 .pro_price{
@@ -121,11 +124,66 @@
     margin-right: 10px;
 }
 
-.form-control{
-    font-size: 1.2rem;
-    width: 100px;
-    height: 30px;
-    margin-right: 50px;
+/* skin 3 */
+.num-in{
+    display: flex;
+    justify-content: center;
+}
+.skin-3 .num-in  > span{
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+	display: block;
+	width: 20px;
+	height: 30px;
+	position: relative;
+	cursor: pointer;
+    margin: 0 5px;
+}
+
+.skin-3 .num-in span.minus:before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	top: 50%;
+	left: 50%;
+	margin-left: -5px;
+	margin-top: -1px;
+	background-color: #333;
+}
+
+.skin-3 .num-in .in-num {
+	
+	width: 40px;
+	height: 30px;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.skin-3 .num-in span.plus:before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	top: 50%;
+	left: 50%;
+	margin-left: -5px;
+	margin-top: -1px;
+	background-color: #333;
+}
+
+.skin-3 .num-in span.plus:after {
+	content: '';
+	position: absolute;
+	height: 10px;
+	width: 2px;
+	left: 50%;
+	top: 50%;
+	margin-top: -5px;
+	margin-left: -1px;
+	background-color: #000;
 }
 
 .cart_submit{
@@ -134,6 +192,7 @@
     background-color: #005B3A;
     text-align: center;
     line-height: 40px;
+    margin-left: 40px;
 }
 
 .cart_submit > a{
@@ -141,6 +200,7 @@
     display: block;
     text-decoration: none;
     color: #fff;
+    
 }
 
 .cart_submit a:hover{
@@ -148,7 +208,7 @@
 }
 
 .pay_trans{
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 /* ---RWD--- */
@@ -202,16 +262,6 @@
     transition: all 1s;
 }
 
-@media screen and (max-width: 575.98px){
-    .products_img img{
-        width: 70px;
-    }
-    .slider{
-        /* border: 1px solid; */
-        width: 100%;
-    }
-}
-
 .products_img img:hover{
     opacity: .5;
     transform:scale(1.1);
@@ -250,7 +300,7 @@
 }
 
 .slick-slide {
-    margin: 0px 20px;
+    margin: 0px 10px;
 }
 
 .slick-prev:before,
@@ -269,4 +319,17 @@
 
 .slick-current {
     opacity: 1;
+}
+
+@media screen and (max-width: 575.98px){
+    .products_img img{
+        width: 60px;
+    }
+    .slider{
+        /* border: 1px solid; */
+        width: 90%;
+    }
+    .fruit_box .pro_name a, .fruit_box .price1{
+        font-size: .9rem;
+    }
 }

@@ -14,7 +14,7 @@
 
     <!-- 2.更改箭頭及點點樣式，自動輪播 -->
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
-    <!-------------- 結束 2.貼在head，自動輪播 -------------->
+    <!------------- 結束 2.貼在head，自動輪播 -------------->
 
     <link rel="stylesheet" href="./css/product_detail.css">
     <title>Product-detail</title>
@@ -82,13 +82,13 @@
 
                     <div class="amount-list">
                         <p class="amount">數量:</p>
-                        <select name="product_standard_order_amount" class="form-control">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        <div class="num-block skin-3">
+                            <div class="num-in">
+                              <span class="minus dis"></span>
+                              <input type="text" class="in-num" value="1" readonly="">
+                              <span class="plus"></span>
+                            </div>
+                        </div>
 
                         <botton class="cart_submit"><a href="#">加入購物車</a></botton>
                     </div>
@@ -107,11 +107,11 @@
                 <div>
                     <li class="fruit_box">
                         <div class="products_img">
-                            <a href="./product_detail.html"><img src="./img01/kw-jam.png"></a>
+                            <a href="./product_detail.html"><img src="./img01/kw-jam.png" alt=""></a>
                         </div>
                         <div class="price_cart-out">
-                            <div class="pro_name"><a href="./product_detail.html">奇異果果醬(3入)</a></div>
-                            <span class="price1">NT$600</span>
+                            <div class="pro_name"><a href="./product_detail.html">奇異果果醬</a></div>
+                            <span class="price1">NT$300</span>
                         </div>
                     </li>
                 </div>
@@ -121,8 +121,8 @@
                             <a href="./product_detail.html"><img src="./img01/sun-jam.png" alt=""></a>
                         </div>
                         <div class="price_cart-out">
-                            <div class="pro_name"><a href="./product_detail.html">桑葚果醬(3入)</a></div>
-                            <span class="price1">NT$600</span>
+                            <div class="pro_name"><a href="./product_detail.html">桑葚果醬</a></div>
+                            <span class="price1">NT$300</span>
                         </div>
                     </li>
                 </div>
@@ -132,8 +132,8 @@
                             <a href="./product_detail.html"><img src="./img01/pineapple-jam.png" alt=""></a>
                         </div>
                         <div class="price_cart-out">
-                            <div class="pro_name"><a href="./product_detail.html">鳳梨果醬(3入)</a></div>
-                            <span class="price1">NT$600</span>
+                            <div class="pro_name"><a href="./product_detail.html">鳳梨果醬</a></div>
+                            <span class="price1">NT$300</span>
                         </div>
                     </li>
                 </div>
@@ -143,8 +143,8 @@
                             <a href="./product_detail.html"><img src="./img01/grape-jam.png" alt=""></a>
                         </div>
                         <div class="price_cart-out">
-                            <div class="pro_name"><a href="./product_detail.html">葡萄果醬(3入)</a></div>
-                            <span class="price1">NT$600</span>
+                            <div class="pro_name"><a href="./product_detail.html">葡萄果醬</a></div>
+                            <span class="price1">NT$300</span>
                         </div>
                     </li>
                 </div>
@@ -154,8 +154,8 @@
                             <a href="./product_detail.html"><img src="./img01/strawberry-jam.jpg.png" alt=""></a>
                         </div>
                         <div class="price_cart-out">
-                            <div class="pro_name"><a href="./product_detail.html">草莓果醬(3入)</a></div>
-                            <span class="price1">NT$600</span>
+                            <div class="pro_name"><a href="./product_detail.html">草莓果醬</a></div>
+                            <span class="price1">NT$300</span>
                         </div>
                     </li>
                 </div>
@@ -213,6 +213,37 @@
                 controlNav: "thumbnails"
             });
         });	
+
+
+        /////////////////// product +/-
+        $(document).ready(function() {
+            $('.num-in span').click(function () {
+                var $input = $(this).parents('.num-block').find('input.in-num');
+                if($(this).hasClass('minus')) {
+                    var count = parseFloat($input.val()) - 1;
+                    count = count < 1 ? 1 : count;
+                    if (count < 2) {
+                        $(this).addClass('dis');
+                    }
+                    else {
+                        $(this).removeClass('dis');
+                    }
+                    $input.val(count);
+                }
+                else {
+                    var count = parseFloat($input.val()) + 1
+                    $input.val(count);
+                    if (count > 1) {
+                        $(this).parents('.num-block').find(('.minus')).removeClass('dis');
+                    }
+                }
+                
+                $input.change();
+                return false;
+            });
+        
+        });
+        // product +/-    
     </script>
 
 </body>

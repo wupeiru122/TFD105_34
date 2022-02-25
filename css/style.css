@@ -1,37 +1,63 @@
 /*---------------banner大圖---------------------*/
-.banner{
-    background-image: url(../img01/banner1-1.png);
-    height: 500px;
-    background-repeat: no-repeat;
-    background-position: center center;
+
+#banner{ 
+    background: url(../img01/banner1-1.png) no-repeat fixed 100% 100%; 
+    background-size: cover; 
+    color: #fff;
+    width: 100%;  
+    height: 400px; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#bannertext .h1_title{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+#bannertext p{
+    font-size: 1.2rem;
+}
+
+#bannertext{ 
+    width: 40%; 
+    position: fixed; 
+    top: 30%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    border: 5px solid #fff; 
+    padding: 20px; 
+    text-align: center;
 }
 
 @media (max-width: 575.98px){
-    .banner{
+    #banner{
       width: 100%;
       height: 250px;
+      background-size: auto;
     }
-    .h1_title{
-        line-height: 250px;
+    #bannertext .h1_title{
         font-size: 2rem;
+    }
+
+    #bannertext{
+        width: 70%;
+        top: 15%;
     }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767.98px){
-    .banner{
+    #banner{
         width: 100%;
-        height: 300px;
     }
-    .h1_title{
-        line-height: 300px;
+    #bannertext .h1_title{
         font-size: 2rem;
     }
+    
 }
 
 /* ----------------------動畫------------------------ */
-.banner{
-    position: relative;
-}
+
 .banner .go_shineMuscat{
     position: absolute;
 	right: 80px;
@@ -66,13 +92,13 @@
 
 /* ------------------關於我們------------------ */
 .about{
-    border: 1px solid;
+    /* border: 1px solid; */
     padding-top: 80px;
 }
 
 
 .about-text{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     position: relative;
@@ -85,15 +111,15 @@
 }
 
 .about-text_btn{
-    border: 1px solid blue;
-    width: 350px;
+    /* border: 1px solid blue; */
+    width: 320px;
 }
 
 .about-text_btn span{
     color: #333;
     display: block;
     margin-bottom: 30px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .about-text_btn > a{
@@ -120,8 +146,8 @@
 
 .about-text_btn a:hover{
     background-color: #E77114;
-    transform: translate3d(0px,5px,10px);
-    box-shadow: 0 3px 2px rgba(0,0,0,.3);
+    transform: translate3d(0px,3px,3px);
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
 }
 
 .about-text .tree{
@@ -233,7 +259,6 @@
         width: 100%;
         height: auto;
         display: block;
-        border: 1px solid blue;
       }
       .fruit-project .item1{
           background-image: url(../img01/grava_pro.jpg);
@@ -283,7 +308,6 @@
 
 /* -----------------------熱銷商品------------------------------ */
 .fruit_box{
-    min-width: 100px;
     border: 1px solid #e5e5e5;
     list-style: none;
     text-align: center;
@@ -298,15 +322,6 @@
     margin: 0 auto;
     margin-bottom: 20px;
     transition: all 1s;
-}
-
-@media screen and (max-width: 575.98px){
-    .products_img img{
-        width: 70px;
-    }
-    .slider{
-        width: 100%;
-    }
 }
 
 .products_img img:hover{
@@ -339,7 +354,7 @@
 
 /* ------------------------------自動輪播-------------------------------- */
 .slider{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 80%;
     margin: 0;
     margin: 0 auto;
@@ -347,7 +362,7 @@
 }
 
 .slick-slide {
-    margin: 0px 20px;
+    margin: 0px 10px;
 }
 
 .slick-prev:before,
@@ -368,6 +383,19 @@
     opacity: 1;
 }
 
+@media screen and (max-width: 575.98px){
+    .products_img img{
+        width: 60px;
+    }
+    .slider{
+        /* border: 1px solid; */
+        width: 90%;
+    }
+    .fruit_box .pro_name a, .fruit_box .price1{
+        font-size: .9rem;
+    }
+}
+
 
 
 
@@ -375,7 +403,7 @@
 .map{
     list-style: none;
     color: #005B3A;
-    padding-top: 80px;
+    padding-top: 50px;
     margin-bottom: 80px;
 }
 
@@ -390,7 +418,7 @@
 }
 
 .fas, .far{
-    width: 25px;
+    font-size: 1rem;
     text-align: center;
     margin-right: 10px;
 }
@@ -410,6 +438,7 @@
     .map iframe{
         width: 100%;
         order: -1;
+        margin-bottom: 20px;
     }
     .map ul > li > span{
         font-size: 1rem;
@@ -439,5 +468,6 @@
           width: 100%;
           height: 300px;
           order: -1;
+
       }
 }

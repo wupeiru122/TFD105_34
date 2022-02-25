@@ -5,7 +5,7 @@ ul.nav-list > li:last-child a{
 
 /* --------------------------步驟--------------------------- */
 .shop_step{
-    border: 1px solid;
+    /* border: 1px solid; */
     text-align: center;
     font-size: 1rem;
     padding-top: 80px;
@@ -26,7 +26,7 @@ ul.nav-list > li:last-child a{
 
 /* ----------------------------購物車------------------------------- */
 .cart_info{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     text-align: center;
     padding: 50px 0 100px;
     width: 100%;
@@ -100,17 +100,11 @@ td{
         margin: 0 auto;
     }
     .shop_step{
-        border: 1px solid;
         font-size: .7rem;
     }
     .info_all .list_img > a {
         font-size: 0.8rem;
     }
-}
-
-.form-control{
-    font-size: 1rem;
-    width: 50px;
 }
 
 .cart_pro-name a{
@@ -136,12 +130,77 @@ td > a.next_click{
     background-color: #005B3A;
     color: #fff;
     display: block;
-    width: 70px;
+    width: 80px;
     height: 40px;
     line-height: 40px;
     border-radius: 3px;
     margin: 0 auto;
 }
+
+/* skin 3 */
+.num-in{
+    display: flex;
+    justify-content: center;
+}
+
+.skin-3 .num-in > span {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	cursor: pointer;
+    margin: 0 5px;
+}
+
+.skin-3 .num-in span.minus:before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	top: 50%;
+	left: 50%;
+	margin-left: -5px;
+	margin-top: -1px;
+	background-color: #333;
+}
+
+.skin-3 .num-in .in-num {
+	
+	width: 40px;
+	height: 20px;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.skin-3 .num-in span.plus:before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	top: 50%;
+	left: 50%;
+	margin-left: -5px;
+	margin-top: -1px;
+	background-color: #333;
+}
+
+.skin-3 .num-in span.plus:after {
+	content: '';
+	position: absolute;
+	height: 10px;
+	width: 2px;
+	left: 50%;
+	top: 50%;
+	margin-top: -5px;
+	margin-left: -1px;
+	background-color: #000;
+}
+
+
 
 
 /* --------------------------------會員登入------------------------------ */

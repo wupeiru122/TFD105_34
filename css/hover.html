@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="./hover.css">
+
+    <style>
+        /* @import url('https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap'); */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            font-family: 'Noto Sans TC';
+        }
+
+        div {
+            display: block;
+        }
+        .box {
+            position: relative;
+            /* max-height: 300px; */
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 1.4px 1.7px rgba(0, 0, 0, 0.017), 0 3.3px 4px rgba(0, 0, 0, 0.024), 0 6.3px 7.5px rgba(0, 0, 0, 0.03), 0 11.2px 13.4px rgba(0, 0, 0, 0.036), 0 20.9px 25.1px rgba(0, 0, 0, 0.043), 0 50px 60px rgba(0, 0, 0, 0.06);
+        }
+
+        .box .hide {
+            opacity: 0;
+        }
+
+        .box .frame {
+            position: absolute;
+            border: 1px solid #fff;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .box h2, .box p{
+            position: absolute;
+            color: #fff;
+            z-index: 2;
+            width: 100%;
+            transition: opacity 0.2s, transform 0.3s;
+        }
+        .box h2 {
+            font-weight: 500;
+            font-size: 22px;
+            margin-bottom: 0;
+            letter-spacing: 1px;
+        }
+
+        .box p{
+            bottom: 0;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        .box:hover{
+            transition: all 0.3s ease-in-out;
+        }
+
+        .box:hover:before{
+            transition: all 0.3s ease-in-out;
+        }
+
+        .box img{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .box img:hover{
+            transition: all 0.3s ease-in-out;
+        }
+
+        .box img:after {
+            content: "";
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        .box img:hover {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* @media screen and (max-width: 880px){
+            .wrapper {
+                width: 50%;
+            }
+            .wrapper {
+                width: 33.3%;
+                height: 100%;
+                padding: 10px;
+            }
+        } */
+
+        .blury-card .frame{
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .blury-card h2, .blury-card p{
+            text-align: center;
+            top: 50%;
+            transform: translatey(-50%);
+            margin: 0;
+            z-index: 3;
+        }
+        .blury-card p{
+            transform: translatey(30px);
+            letter-spacing: 3px;
+        }
+        .blury-card:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #008E6B;
+            z-index: 1;
+            left: 0;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        .blury-card img{
+            z-index: 2;
+        }
+
+        .blury-card:hover .frame{
+            width: calc(100% - 120px);
+            height: calc(100% - 120px);
+            opacity: 1;
+        }
+        .blury-card:hover img {
+            opacity: 0.7;
+        }
+        .blury-card:hover:before{
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper" style="position: relative;">
+
+        <div class="login_block">
+            <div class="ad_block">
+                <a class="close" href="#"><i class="fa-regular fa-x" style="position: absolute; top: 130px; right: 30px; font-size: 2rem; color: #333;"></i></a>
+                <img src="../img_global/fruit_banner.png"  alt="" style="display:block; margin: 100px auto 0;">                    
+            </div>
+        </div>
+
+
+        <header class="header">
+            <a class="login_icon" href="#"><img class="logo" src="../img_global/logo3.svg" alt=""></a>
+    
+            <button class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
+    
+            <nav class="main_nav">
+                <ul class="nav-list">
+                    <li><a href="./about.html">關於我們</a></li>
+                    <li><a href="./product.html">商品專區</a></li>
+                    <li><a href="./pick_project.html">採果行程</a></li>
+                    <li><a href="./contact.html">聯絡我們</a></li>
+                    <li class="login_btn"><a href="./user.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="./shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+               
+        </header>
+
+        <div class="box blury-card" >
+          <img src="../img01/banner1-1.png" alt="Blue Ridge Mountains">
+          <div class="frame">
+            <h2>來趟水果之旅吧!</h2>
+            <p>一起採果去</p>
+          </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        // JavaScript 漢堡樣式版本
+        document.addEventListener("DOMContentLoaded", function(){
+        
+            var btn_hamburger = document.getElementsByClassName("hamburger")[0];
+            btn_hamburger.addEventListener("click", function(){
+                this.classList.toggle("is-active");
+            });       
+        });
+
+        // 點擊按鈕，選單縮放
+        $("button.hamburger").on("click", function(){
+            $("nav.main_nav").slideToggle();
+        });
+
+
+        //彈窗
+        let login_icon = document.getElementsByClassName("login_icon")[0];
+        let login_block = document.getElementsByClassName("login_block")[0];
+        let ad_block = document.getElementsByClassName("ad_block")[0];
+
+        login_icon.addEventListener("click",function(){
+            login_block.classList.toggle("-on");
+            // ad_block.classList.toggle("-on");
+        });
+
+
+
+        let close = document.getElementsByClassName("close")[0];
+    
+        login_block.addEventListener("click",function(){
+            login_block.classList.remove("-on");
+        });
+
+
+
+    </script>
+</body>
+</html>
+
+<!-- https://source.unsplash.com/900x900/?street,travel -->

@@ -47,64 +47,64 @@
                 <table class="info_all">
                     <thead>
                         <tr class="list-title">
-                            <th style="width: 10%;">取消</th>
-                            <th style="width: 40%">商品名稱</th>
-                            <th style="width: 20%;">數量</th>
-                            <th style="width: 20%;">價格</th>
+                            <th style="width: 50%">商品名稱</th>
+                            <th style="width: 25%;">數量</th>
+                            <th style="width: 10%;">價格</th>
+                            <th style="width: 10%;">刪除</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="del_icon"><a href="#"><img src="./img07/Trash_Full.svg" alt=""></a></td>
                             <td class="list_img">
                                 <a href="./product_detail.html"><img src="./img07/giftbox-a-1.png" alt=""></a>
                                 <a href="./product_detail.html">禮盒A(10入/箱)</a>
                             </td>
                             <td> 
-                                <select name="product_standard_order_amount" class="form-control">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
+                                <div class="num-block skin-3">
+                                    <div class="num-in">
+                                      <span class="minus dis"></span>
+                                      <input type="text" class="in-num" value="1" readonly="">
+                                      <span class="plus"></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>1200</td>
+                            <td class="del_icon"><a href="#"><img src="./img07/Trash_Full.svg" alt=""></a></td>
                         </tr>
                         <tr>
-                            <td class="del_icon"><a href="#"><img src="./img07/Trash_Full.svg" alt=""></a></td>
                             <td class="list_img">
                                 <a href="#"><img src="./img07/giftbox-b-2.png" alt=""></a>
                                 <a href="#">禮盒B(10入/箱)</a>
                             </td>
                             <td>
-                                <select name="product_standard_order_amount" class="form-control">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
+                                <div class="num-block skin-3">
+                                    <div class="num-in">
+                                      <span class="minus dis"></span>
+                                      <input type="text" class="in-num" value="1" readonly="">
+                                      <span class="plus"></span>
+                                    </div>
+                                </div>
                             </td>
                             <td>1200</td>
+                            <td class="del_icon"><a href="#"><img src="./img07/Trash_Full.svg" alt=""></a></td>
                         </tr>
                         <tr class="price_totle">
-                            <td></td>
                             <td>商品合計</td>
                             <td>2</td>
                             <td>2400</td>
+                            <td></td>
                         </tr>
                         <tr class="final">
                             <td></td>
-                            <td></td>
                             <td>總計</td>
                             <td>2400</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td></td>
-                            <td></td>
                             <td><a class="next_click" href="#">下一步</a></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
@@ -162,6 +162,37 @@
         $("button.hamburger").on("click", function(){
         $("nav.main_nav").slideToggle();
         });
+
+
+        /////////////////// product +/-
+        $(document).ready(function() {
+            $('.num-in span').click(function () {
+                var $input = $(this).parents('.num-block').find('input.in-num');
+                if($(this).hasClass('minus')) {
+                    var count = parseFloat($input.val()) - 1;
+                    count = count < 1 ? 1 : count;
+                    if (count < 2) {
+                        $(this).addClass('dis');
+                    }
+                    else {
+                        $(this).removeClass('dis');
+                    }
+                    $input.val(count);
+                }
+                else {
+                    var count = parseFloat($input.val()) + 1
+                    $input.val(count);
+                    if (count > 1) {
+                        $(this).parents('.num-block').find(('.minus')).removeClass('dis');
+                    }
+                }
+                
+                $input.change();
+                return false;
+            });
+        
+        });
+        // product +/-
 
     </script>
 </body>

@@ -3,12 +3,16 @@ ul.nav-list > li:nth-child(4) a{
     color: #E77114;
 }
 
+ul.nav-list > li:nth-child(4) a::after{
+    width: 0%;
+}
 /* --------------------------banner大圖-------------------------- */
 .banner{
     background-image: url(../img06/banner06.png);
-    height: 500px;
+    height: 400px;
     background-repeat: no-repeat;
     background-position: center;
+	background-size: cover;
 }
 @media (max-width: 575.98px){
     .banner{
@@ -191,6 +195,7 @@ ul.nav-list > li:nth-child(4) a{
 	border: 0;
 	display: block;
 	margin: 0 auto;
+	cursor: pointer;
 	
 }
 

@@ -46,10 +46,13 @@
                
         </header>
 
-        <div class="banner">  <!--banner大圖-->  
-            <h1 class="h1_title">一起採果趣!</h1>
-            <!-- <div class="go_shineMuscat"><a href="#"><img src="./img01/fruits_basket.png"></a></div> -->
+        <div id="banner">
+            <div id="bannertext">
+                <h1 class="h1_title">一起採果去</h1>
+                <p>走吧!來趟水果之旅</p>
+            </div>
         </div>
+        <!-- <div class="go_shineMuscat"><a href="#"><img src="./img01/fruits_basket.png"></a></div> -->
 
         <article class="primary_bg"><!--框架規範-->
 
@@ -87,8 +90,8 @@
                             <a href="./product_detail.html"><img src="./img01/kw-jam.png"></a>
                         </div>
                         <div class="price_cart-out">
-                            <div class="pro_name"><a href="./product_detail.html">奇異果果醬(3入)</a></div>
-                            <span class="price1">NT$600</span>
+                            <div class="pro_name"><a href="./product_detail.html">奇異果果醬</a></div>
+                            <span class="price1">NT$300</span>
                         </div>
                     </li>
                 </div>
@@ -98,8 +101,8 @@
                             <a href="./product_detail.html"><img src="./img01/sun-jam.png" alt=""></a>
                         </div>
                         <div class="price_cart-out">
-                            <div class="pro_name"><a href="./product_detail.html">桑葚果醬(3入)</a></div>
-                            <span class="price1">NT$600</span>
+                            <div class="pro_name"><a href="./product_detail.html">桑葚果醬</a></div>
+                            <span class="price1">NT$300</span>
                         </div>
                     </li>
                 </div>
@@ -109,8 +112,8 @@
                             <a href="./product_detail.html"><img src="./img01/pineapple-jam.png" alt=""></a>
                         </div>
                         <div class="price_cart-out">
-                            <div class="pro_name"><a href="./product_detail.html">鳳梨果醬(3入)</a></div>
-                            <span class="price1">NT$600</span>
+                            <div class="pro_name"><a href="./product_detail.html">鳳梨果醬</a></div>
+                            <span class="price1">NT$300</span>
                         </div>
                     </li>
                 </div>
@@ -120,8 +123,8 @@
                             <a href="./product_detail.html"><img src="./img01/grape-jam.png" alt=""></a>
                         </div>
                         <div class="price_cart-out">
-                            <div class="pro_name"><a href="./product_detail.html">葡萄果醬(3入)</a></div>
-                            <span class="price1">NT$600</span>
+                            <div class="pro_name"><a href="./product_detail.html">葡萄果醬</a></div>
+                            <span class="price1">NT$300</span>
                         </div>
                     </li>
                 </div>
@@ -131,8 +134,8 @@
                             <a href="./product_detail.html"><img src="./img01/strawberry-jam.jpg.png" alt=""></a>
                         </div>
                         <div class="price_cart-out">
-                            <div class="pro_name"><a href="./product_detail.html">草莓果醬(3入)</a></div>
-                            <span class="price1">NT$600</span>
+                            <div class="pro_name"><a href="./product_detail.html">草莓果醬</a></div>
+                            <span class="price1">NT$300</span>
                         </div>
                     </li>
                 </div>
@@ -191,6 +194,26 @@
         $("button.hamburger").on("click", function(){
             $("nav.main_nav").slideToggle();
         });
+
+
+        //banner淡出
+        function EasyPeasyParallax(){
+            scrollPos = $(this).scrollTop();
+            $('#banner').css({
+                'background-position' : '50%' + (-scrollPos/4)+"px"
+            });
+            $('#bannertext').css({
+                'margin-top': (scrollPos/4)+"px",
+                'opacity': 1-(scrollPos/250)
+            });
+        }
+
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                EasyPeasyParallax();
+            });
+        });
+
     </script>
     
 </body>
