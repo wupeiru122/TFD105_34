@@ -59,7 +59,7 @@ ul.nav-list > li:first-child a::after{
 
 .about-text_btn{
     /* border: 2px solid red; */
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: 300px;
 }
 
@@ -269,7 +269,7 @@ p.intro_con{
 }
 
 .intro1a{
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .intro1_1{
@@ -321,7 +321,7 @@ p.intro_con{
 }
 
 .intro2{
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 30px;
 }
 

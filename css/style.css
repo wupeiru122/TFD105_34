@@ -42,7 +42,7 @@
 
     #bannertext{
         width: 70%;
-        top: 15%;
+        top: 20%;
     }
 }
 
@@ -54,39 +54,6 @@
         font-size: 2rem;
     }
     
-}
-
-/* ----------------------動畫------------------------ */
-
-.banner .go_shineMuscat{
-    position: absolute;
-	right: 80px;
-	top: 290px;
-	z-index: 1;
-    animation: fuwafuwa 3s infinite linear alternate;
-}
-
-.go_shineMuscat img{
-    width: 30%;
-}
-
-.go_shineMuscat a:hover img {
-  opacity: 1;
-}
-
-@keyframes fuwafuwa{
-
-    0%{
-        transform: translate(0, 0) rotate(-5deg); opacity: 1;    
-    }
-
-    50%{
-        transform: translate(0, -5px) rotate(0deg); opacity: .7;
-    }
-
-    100%{
-        transform: translate(0, 0) rotate(5deg); opacity: .5;
-    }
 }
 
 
@@ -119,7 +86,7 @@
     color: #333;
     display: block;
     margin-bottom: 30px;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .about-text_btn > a{
