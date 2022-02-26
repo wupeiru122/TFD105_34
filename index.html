@@ -8,12 +8,11 @@
     
     <title>Home</title>
 
-    <!-- 1.把slick資料夾放入專案 2.貼上html 3.建立一個slick.js嵌入 4.slick-theme.css可更改樣式-->
+ 
     <!-------------- 開始 2.貼在head，自動輪播 -------------->
     <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
 
     <!-- 2.更改箭頭及點點樣式，自動輪播 -->
-    <!-- Add the new slick-theme.css if you want the default styling -->
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
      <!-------------- 結束 2.貼在head，自動輪播 -------------->
 
@@ -22,6 +21,11 @@
 <body>
 
     <div class="wrapper">
+
+        <!-- scroll to top -->
+        <div id="stop" class="scrollTop">
+            <span><a href="">Top</a></span>
+        </div>
 
         <header class="header">
             <a href="./index.html"><img class="logo" src="./img_global/logo3.svg" alt=""></a>
@@ -213,6 +217,32 @@
                 EasyPeasyParallax();
             });
         });
+
+        //Scroll to top
+        var scrollTop = $(".scrollTop");
+
+        $(window).scroll(function(){
+
+            var topPos = $(this).scrollTop();
+
+            if (topPos > 100){
+                $(scrollTop).css("opacity", "1");
+
+            }else{
+                $(scrollTop).css("opacity", "0");
+            }
+        });
+
+        //Click event to scroll to top
+        $(scrollTop).click(function(){
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+
+        }); // click() scroll top EMD
+
+
 
     </script>
     

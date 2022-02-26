@@ -23,7 +23,7 @@ body{
 .wrapper{
     width: 100%;
     margin: 0 auto;
-    position: relative;
+    position: relative !important;
 }
 
 
@@ -397,4 +397,27 @@ ul.footer-list li:last-child > a{
     article.primary_bg{
       width: 1140px;
     }
+}
+
+/****************************************
+  IMPORTANT 
+*****************************************/
+.scrollTop{
+    position: absolute;
+    position: fixed;
+    right: 3%;
+    bottom: 10px;
+    background-color: #E77114;
+    border-radius: 50%;
+    padding: 15px;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+    z-index: 5;
+}
+  
+.scrollTop a{
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
 }
