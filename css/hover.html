@@ -198,7 +198,7 @@
 
         <div class="login_block">
             <div class="ad_block">
-                <a class="close" href="#"><i class="fa-regular fa-x" style="position: absolute; top: 130px; right: 30px; font-size: 2rem; color: #333;"></i></a>
+                <a class="close" href="#"><i class="fa-regular fa-x" style="border: 1px solid; position: absolute; top: 130px; right: 150px; font-size: 2rem; color: #fff;"></i></a>
                 <img src="../img_global/fruit_banner.png"  alt="" style="display:block; margin: 100px auto 0;">                    
             </div>
         </div>
@@ -260,16 +260,24 @@
 
         login_icon.addEventListener("click",function(){
             login_block.classList.toggle("-on");
-            // ad_block.classList.toggle("-on");
+            ad_block.classList.toggle("-on");
         });
 
+        
 
 
         let close = document.getElementsByClassName("close")[0];
     
         login_block.addEventListener("click",function(){
             login_block.classList.remove("-on");
+            ad_block.classList.remove("-on");
         });
+
+        // ad_block.addEventListener("click", function(e){
+        //     e.stopPropagation();
+        //     alert("aaa")
+        // });
+        
 
 
 

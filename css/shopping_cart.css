@@ -29,12 +29,12 @@ ul.nav-list > li:last-child a{
     /* border: 1px solid red; */
     text-align: center;
     padding: 50px 0 100px;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
 }
 
 .info_all{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     font-size: 1rem;
@@ -48,13 +48,9 @@ thead{
 .list-title{
     background-color: #E6E6E6;
 }
-        
-tr{
-    width: 100%;
-}
 
 td{
-    padding: 10px;
+    padding: 5px;
     vertical-align: middle;
 }
 
@@ -80,16 +76,20 @@ td{
 
 .info_all .list_img > a > img{
     display: block;
-    width: 80px;
+    width: 90px;
     margin: 0 auto;
     margin-right: 30px;
 }
+
 @media screen and (min-width: 576px) and (max-width: 767.98px){
     .info_all{
         width: 100%;
     }
 }
 @media (max-width: 576.98px){
+    .cart_info{
+        width: 100%;
+    }
     .info_all{
         width: 100%;
     }
@@ -98,6 +98,7 @@ td{
     }
     .info_all .list_img > a > img{
         margin: 0 auto;
+        min-width: 40px;
     }
     .shop_step{
         font-size: .7rem;
@@ -124,7 +125,7 @@ tr.price_totle{
     height: 80px;
 }
 
-td > a.next_click{
+a.next_click{
     text-decoration: none;
     font-size: 1rem;
     background-color: #005B3A;
@@ -134,7 +135,7 @@ td > a.next_click{
     height: 40px;
     line-height: 40px;
     border-radius: 3px;
-    margin: 0 auto;
+    margin-left: auto;
 }
 
 /* skin 3 */
@@ -197,7 +198,7 @@ td > a.next_click{
 	top: 50%;
 	margin-top: -5px;
 	margin-left: -1px;
-	background-color: #000;
+	background-color: #333;
 }
 
 

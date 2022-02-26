@@ -319,24 +319,26 @@ nav.main_nav ul.nav-list > li > a > .fa-solid{
 .login_block{
     display:none; 
     border: 2px solid blue; 
-    height: 100vh;
+    height: 100%;
     position:absolute; 
     top: 0; 
     left: 0; 
     right: 0; 
     width: 100%; 
-    height: 100vh; 
     background-color: rgb(51, 51, 51, .7); 
     z-index: 66;
 }
 
 .ad_block{
-    /* display:none;  */
-    border: 2px solid red; 
-    display: inline-block; 
+    display:none; 
+    border: 2px solid red;  
     position: relative; 
     left: 50%; 
     transform: translateX(-50%);
+}
+
+.ad_block img{
+    position: relative;
 }
 
 
