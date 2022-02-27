@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/about.css">
-    <title>About</title>
+    <link rel="icon" href="./img_global/logo_icon.ico" type="image/x-icon"/>
+    <title>關於我們</title>
 </head>
 <body>
     <div class="wrapper">
@@ -147,7 +147,7 @@
 
                     <div class="intro2">
                         <img src="./img02/about_pick2.png" alt="">
-                        <div class="intro2a">
+                        <div class="intro2a" >
                             <p class="intro1_1">三、天然有機栽培</p>
                             <p class="intro1_2">果然觀光果園自成立以來，秉持對土地與生態環境保護的熱忱，結合四季時令，讓各種植物與昆蟲，保持其自然的食物鏈關係，利用自然生態工法維持生態平衡。常年不使用農藥及化學肥料，以尊重環境倫理的方式，讓園內作物自然生長，為週邊的動物昆蟲提供天然的食物來源。</p>
                         </div>
@@ -169,7 +169,6 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         // JavaScript 漢堡樣式版本
@@ -209,6 +208,36 @@
             return false;
 
         }); // click() scroll top EMD
+
+        
+
+	    //Trigger when all recommendation card has been fetched
+		$(document).ready(function(){
+  		animateInView();
+ 		});
+  
+        //Trigger events when objects scroll into view
+        $(window).scroll(function () {
+            animateInView();
+        });
+        
+        function animateInView(){
+            var scrolledAmount = $(window).scrollTop(),
+            bottomOfWindow = scrolledAmount + $(window).height();
+
+            $('.about-text').each(function () {
+                var cardTop = $(this).offset().top;
+
+                if(cardTop <= bottomOfWindow ){
+                    $(this).addClass('animate');
+                }
+                // else is for testing only without refreshing. remove later.
+                else {
+                $(this).removeClass('animate');
+                } 
+            });
+        };
+
 
     </script>
     

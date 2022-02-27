@@ -71,6 +71,18 @@ ul.nav-list > li:first-child a::after{
     bottom: 0;
 }
 
+
+.about-text { 
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+.animate { 
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 @media all and (max-width: 575.98px){
     .about-text{
         display: block;
@@ -342,5 +354,4 @@ p.intro_con{
         font-size: 1rem;
     }
 }
-
 

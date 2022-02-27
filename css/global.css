@@ -193,9 +193,7 @@ header.header{
     header.header{    
       display: block;
     }
-    header.header img.logo{
-        display: block;
-    }
+    
 }
 
 header.header img.logo{
@@ -226,6 +224,10 @@ nav.main_nav{
       width: 100%;
       background-color: #fff;
       padding-left: 0;
+    }
+    header.header img.logo{
+        display: block;
+        width: 200px;
     }
 }
 
@@ -368,9 +370,9 @@ ul.footer-list li:last-child > a{
     .footer{
         height: auto;
     }
-    .scrollTop{
+    /* .scrollTop{
         display: none;
-    }
+    } */
 }
   
 @media screen and (min-width: 576px) and (max-width: 767.98px){
@@ -409,7 +411,7 @@ ul.footer-list li:last-child > a{
     position: absolute;
     position: fixed;
     right: 3%;
-    bottom: 10px;
+    bottom: 30px;
     background-color: #E77114;
     border-radius: 50%;
     padding: 15px;
