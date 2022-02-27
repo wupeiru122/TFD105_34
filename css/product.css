@@ -39,11 +39,6 @@ ul.nav-list > li:nth-child(2) a::after{
     }
 }
 
-/*---------------側邊欄+產品欄---------------------*/
-main.pro_all{
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-}
 
 /*----------------------側邊欄-----------------------*/
 .product-menu{

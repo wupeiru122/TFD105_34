@@ -246,4 +246,5 @@ a.next_click{
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 3px;
 }

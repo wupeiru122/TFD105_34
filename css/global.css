@@ -368,6 +368,9 @@ ul.footer-list li:last-child > a{
     .footer{
         height: auto;
     }
+    .scrollTop{
+        display: none;
+    }
 }
   
 @media screen and (min-width: 576px) and (max-width: 767.98px){
@@ -417,7 +420,7 @@ ul.footer-list li:last-child > a{
   
 .scrollTop a{
     display: block;
-    font-size: 18px;
+    font-size: 15px;
     color: #fff;
     text-decoration: none;
 }
