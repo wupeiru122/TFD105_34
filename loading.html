@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="overlay"> 
+        <img style="top: 35%;width: 10%; left: 45%;position: relative;" src="<?php echo PROTOCOL.base_url(); ?>assets/img/loader.png" alt="Loading" /> 
+   </div> 
+   <style type="text/css"> 
+       #overlay{ 
+         position:fixed; 
+         z-index:99999999; 
+         top:0; 
+         left:0; 
+         bottom:0; 
+         right:0; 
+         background: #fff; 
+       } 
+   </style> 
+   <script type="text/javascript"> 
+       $(window).load(function(){ 
+          $("#overlay").delay(0).animate({ 'opacity': 0 }, 800, null, function() { 
+               $('#overlay').fadeOut('slow'); 
+          }); 
+       }); 
+   </script> 
+</body>
+</html>
