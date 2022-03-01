@@ -70,7 +70,7 @@ body{
 
 /*=============================漢堡標示===============================*/
 .hamburger {
-    padding: 15px 15px;
+    /* padding: 15px 15px; */
     display: inline-block;
     cursor: pointer;
     transition-property: opacity, filter;
@@ -104,6 +104,7 @@ body{
     height: 24px;
     display: inline-block;
     position: relative; 
+    vertical-align: middle;
 }
   
 .hamburger-inner{
@@ -113,7 +114,7 @@ body{
 }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
       width: 30px;
-      height: 2.5px;
+      height: 3px;
       background-color: #005B3A;
       border-radius: 4px;
       position: absolute;
@@ -200,7 +201,7 @@ header.header{
 header.header img.logo{
     /* border: 1px solid yellow; */
     display: block;
-    width: 230px;
+    width: 70%;
     height: auto;
     padding: 10px;
 }
@@ -228,7 +229,7 @@ nav.main_nav{
     }
     header.header img.logo{
         display: block;
-        width: 200px;
+        width: 40%;
     }
 }
 
@@ -299,10 +300,12 @@ nav.main_nav ul.nav-list > li > a > .fa-solid{
 
 /* 行動版時，調整列表樣式 */
 @media screen and (max-width: 767.98px){
+    ul.nav-list > li:hover{
+        background-color: rgb(231, 113, 20, .3);
+    }
     ul.nav-list > li{
       display: block;
       text-align: center;
-      padding: 20px 0;
       border-bottom: solid #005B3A 1px;
     }
     ul.nav-list > li:last-child{
@@ -314,7 +317,12 @@ nav.main_nav ul.nav-list > li > a > .fa-solid{
     }
 
     ul.nav-list > li > a{
+        display: block;
+        padding: 20px 0;
         position: relative;/*給偽元素定位*/
+    }
+    ul.nav-list > li > a:hover:after{
+        width: 0;
     }
     
 }  
@@ -415,7 +423,7 @@ ul.footer-list li:last-child > a{
     bottom: 30px;
     background-color: #E77114;
     border-radius: 50%;
-    padding: 18px;
+    padding: 15px;
     opacity: 0;
     transition: all 0.4s ease-in-out 0s;
     z-index: 5;
@@ -432,10 +440,10 @@ ul.footer-list li:last-child > a{
     text-decoration: none;
 }
 
-.scrollTop a::before{
+/* .scrollTop a::before{
     position: absolute;
     top: 3px;
     right: 25px;
     content: "\f077";
     font-family: fontawesome;
-}
+} */
